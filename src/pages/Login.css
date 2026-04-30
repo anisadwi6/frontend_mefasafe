@@ -1,0 +1,112 @@
+.login-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  background: linear-gradient(to bottom, #cfd8dc, #5f8fa8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.login-header {
+  position: absolute;
+  top: 20px;
+  left: 30px;   /* ⬅️ pindah ke kiri */
+}
+
+.logo {
+  width: 100px;
+}
+
+.login-header h3 {
+  font-size: 14px;
+}
+
+.family {
+  width: 65%;
+  max-width: 250px;
+}
+
+.form-wrapper {
+  width: 320px;   /* ⬅️ fleksibel seperti mobile */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+    width: 65%;
+  padding: 14px 45px;
+  border-radius: 15px;
+  border: none;
+  background: #eeeeee;
+}
+
+input {
+  width: 250px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  font-size: 16px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.button-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+button {
+  width: 48%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background: #1f5c73;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.help {
+  margin-top: 15px;
+  color: #444;
+  font-size: 14px;
+}

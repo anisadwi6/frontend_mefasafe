@@ -1,0 +1,86 @@
+.home-container {
+  min-height: 100vh;
+  background: #8fb1c1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.home-header {
+  background: linear-gradient(to right, #a9c6cf, #7ea3d8);
+  padding: 15px;
+  position: relative;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-area img {
+  width: 30px;
+}
+
+.family-icon {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 80px;
+}
+
+
+.card {
+  background: linear-gradient(to bottom, #cfd9df, #5f8fa3);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  width: 70%;
+}
+
+.greeting {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.saldo {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.status {
+  color: white;
+  margin-top: 5px;
+}
+
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 80px;
+}
+
+.menu-item p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+
+.bottom-nav {
+  margin-top: auto;
+  background: #6d9db1;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.bottom-nav .active {
+  font-size: 24px;
+}
