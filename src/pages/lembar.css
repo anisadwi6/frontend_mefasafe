@@ -1,0 +1,103 @@
+* {
+  font-family: "Aoboshi One", serif;
+}
+
+.lembar-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  background: linear-gradient(to bottom, #cfd8dc, #5f8fa8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  position: relative;
+}
+
+h1{
+    font-size: 18px;
+  color: black;
+  margin-top: 55px;
+  margin-bottom: 0px;
+  border: 2px solid black;  
+  padding: 3px 3px;          
+  border-radius: 4px;          
+  width: 50%;                  
+  text-align: center;
+}
+
+ol{
+    font-size: 10px;
+  color: black;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-right: 20px;
+  text-align:start;
+}
+
+h4{
+    font-size: 10px;
+  color: black;
+  margin-left: 60px;
+  text-align: left;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+  margin-right: 22px;
+}
+
+input[type="checkbox"] {
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  accent-color: white; 
+}
+
+label {
+  font-size: 11px;
+  color: black;
+  font-weight: bold;
+  text-align: start;
+}
+
+.mendaftar {
+  width: 100px;
+  padding: 10px ;
+  border-radius: 10px;
+  background: rgb(234, 230, 230);
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  position:absolute;
+  right:30px;
+  bottom: 10px;
+  font-weight: bold;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;   /* ⬅️ pindah ke kiri */
+  width: 80px;
+}
+
+.lembar-header h1 {
+  font-size: 14px;
+}
+
+.family-lembar {
+  width: 65%;
+  max-width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+

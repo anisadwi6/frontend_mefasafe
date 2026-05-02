@@ -1,3 +1,7 @@
+* {
+  font-family: "Aoboshi One", serif;
+}
+
 .login-container {
   height: 100vh;
   width: 100%;
@@ -15,12 +19,9 @@
 
 .login-header {
   position: absolute;
-  top: 20px;
-  left: 30px;   /* ⬅️ pindah ke kiri */
-}
-
-.logo {
-  width: 100px;
+  top: 0px;
+  left: 0px;   /* ⬅️ pindah ke kiri */
+  width: 80px;
 }
 
 .login-header h3 {
@@ -80,6 +81,7 @@ input {
   position: absolute;
   right: 10px;
   top: 10px;
+
 }
 
 .button-group {

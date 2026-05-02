@@ -1,10 +1,17 @@
-import { useState } from "react";
 import "./Login.css";
 import logo from "../assets/logo.png";
 import family from "../assets/family.png";
+import hide from "../assets/Hide.png";
+import eye from "../assets/Eye.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [show, setShow] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDaftar = () => navigate("/lembar");
+  const handleLogin = () => navigate("/Home");
 
   return (
     <div className="login-container">
@@ -15,20 +22,25 @@ function Login() {
       <img src={family} alt="family" className="family" />
 
       <div className="login-form">
-      <div className="input-group">
-         <span className="icon">📧</span>
-         <input type="email" placeholder="Email" />
-      </div>
+        <div className="input-group">
+          <span className="icon">📧</span>
+          <input type="email" placeholder="Email" />
+        </div>
 
-      <div className="input-group">
-        <span className="icon">🔒</span>
-        <input type="password" placeholder="Password"/>
-        <span className="eye">👁</span>
-      </div>
+        <div className="input-group">
+          <span className="icon">🔒</span>
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+          />
+          <span className="eye" onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? <img src={hide}></img> : <img src={eye}></img>}
+          </span>
+        </div>
 
         <div className="button-group">
-          <button className="daftar">Daftar</button>
-          <button className="login">Login</button>
+          <button className="daftar" onClick={handleDaftar}>Daftar</button>
+          <button className="login" onClick={handleLogin}>Login</button>
         </div>
 
         <p className="help">Bantuan</p>
