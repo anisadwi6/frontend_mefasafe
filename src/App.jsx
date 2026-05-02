@@ -7,6 +7,7 @@ import Settings from "./pages/Settings";
 
 function App() {
   return (
+    // update all features to react-router-dom v6
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
