@@ -43,7 +43,7 @@
   border-radius: 12px;
   width: 50%;
   position: absolute;
-  margin-top: 65px;
+  margin-top: 66px;
   text-align: left;
 }
 
@@ -56,6 +56,12 @@
 .card2 p.status{
   color: white;
   font-size: 13px;
+  line-height: 1.0;
+}
+
+.card2 img{
+  margin-top: 5px;
+ width: 15%; 
 }
 
 .saldo {
@@ -63,19 +69,18 @@
   font-size: 16px;
   text-align: right;
   position: absolute;
-  top: 35px;
+  top: 37px;
   left: 50px;
 }
 
 .menu-row1 {
-  margin-left: 20px;
+  margin-left: 25px;
   margin-right: 20px;
   display: flex;
-  justify-content: flex-start; 
   gap: 40px;   
   font-size: 12px;   
   color:black;      
-  line-height: 13px;     
+  line-height: 15px;     
 }
 
 .rs, .pendaftaran{
@@ -90,18 +95,17 @@
   margin-left: 20px;
   margin-right: 50px;
   display: flex;
-  gap: 30px;   
+  gap: 25px;   
   font-size: 12px;   
   color:black;      
   line-height: 13px;       
 }
 
 .menu-row3 {
-  margin-left: 50px;
-  margin-right: 20px;
+  margin-left: 70px;
   display: flex;
   justify-content: flex-start; 
-  gap: 40px;   
+  gap: 10px;   
   font-size: 12px;   
   color:black;      
   line-height: 13px;       
@@ -112,7 +116,7 @@
   display: flex;
   justify-content: space-around;
   padding: 2px;
-  margin-top: 24px;
+  margin-top: 0px;
 }
 
 .bottom-nav img {

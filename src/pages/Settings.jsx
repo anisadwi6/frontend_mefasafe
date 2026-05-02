@@ -63,7 +63,7 @@ const handleProfil = () => console.log("Profil");
         </div>
 
         {/* BOTTOM NAV */}
-        <div className="bottom-nav">
+        <div className="bottom-nav-settings">
                  <img src={set} className="set" onClick={handleSetting} style={{ cursor: "pointer" }}></img>
                  <img src={not} className="not" onClick={handleNotifikasi} style={{ cursor: "pointer" }}></img>
                  <img src={hp} className="hp" onClick={handleHp} style={{ cursor: "pointer" }}></img>

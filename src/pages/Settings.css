@@ -83,7 +83,7 @@
 }
 
 /* BOTTOM NAV */
-.bottom-nav {
+.bottom-nav-settings {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -97,7 +97,7 @@
 }
 
 /* ICON NAV */
-.bottom-nav img {
+.bottom-nav-settings img {
   width: 26px;
   height: 26px;
   object-fit: contain;
@@ -105,6 +105,6 @@
 }
 
 /* OPTIONAL: ACTIVE ICON */
-.bottom-nav img:active {
+.bottom-nav-settings img:active {
   transform: scale(0.9);
 }
