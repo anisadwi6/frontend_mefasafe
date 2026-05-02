@@ -1,0 +1,110 @@
+/* BACKGROUND LUAR */
+.app-wrapper {
+  background-color: #111827;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER (BIAR KAYAK HP) */
+.phone-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #9ec3d6;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  padding: 16px;
+}
+
+.header img {
+  width: 140px;
+}
+
+/* TITLE */
+.title-box {
+  background-color: #2f6f7f;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto 20px auto;
+  border-radius: 5px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px; /* biar tidak ketutup bottom nav */
+}
+
+/* ITEM MENU */
+.menu-item {
+  background-color: #eeeeee;
+  padding: 18px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* strip biru seperti desain */
+  border-top: 12px solid #9ec3d6;
+}
+
+/* BAGIAN KIRI */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ICON KIRI */
+.icon-left {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.menu-item span {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* ICON PANAH */
+.icon-right {
+  width: 28px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #6ea1b8;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+/* ICON NAV */
+.bottom-nav img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* OPTIONAL: ACTIVE ICON */
+.bottom-nav img:active {
+  transform: scale(0.9);
+}
