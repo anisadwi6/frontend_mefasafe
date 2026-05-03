@@ -23,6 +23,7 @@ import "./Home.css";
 export default function Home() {
   const [showEye, setShowEye] = useState(false);
   const navigate = useNavigate();
+  const handleKonsul = () => navigate ("/konsul");
   const handleRs = () => navigate("/rs");
   const handleSetting = () => navigate("/settings");
   const handleNotifikasi = () => navigate("/rs");
@@ -49,11 +50,11 @@ export default function Home() {
         
         <div className="menu-row1" >
           <div className="menu" onClick={handleRs} style={{ cursor: "pointer" }}>
-            <img src={rs} className="rs" alt="Rumah Sakit"/>
+            <img src={rs} className="rs" />
             <p>Daftar <br></br>Rumah Sakit</p>
           </div>
 
-          <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
+          <div className="menu" onClick={handleKonsul} style={{ cursor: "pointer" }}>
             <img src={konsul} className="konsul" />
             <p>Konsultasi Dokter</p>
           </div>
@@ -63,32 +64,37 @@ export default function Home() {
             <p>Kalender Pengingat</p>
           </div>
         </div>
-      
-        <div className="menu-row2">
-          <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
-            <img src={riwayat} className="riwayat"></img>
+
+        <div className="menu-row2" >
+          <div className="menu">
+            <img src={riwayat} className="riwayat" alt="riwayat"/>
             <p>Riwayat Transaksi</p>
           </div>
+
           <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
-            <img src={health} className="health"></img>
+            <img src={health} className="health" />
             <p>Health Service</p>
           </div>
+        
           <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
             <img src={pendaftaran} className="pendaftaran"></img>
             <p>Pendaftaran Pelayanan</p>
           </div>
         </div>
 
-        <div className="menu-row3">
-          <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
-            <img src={fs} className="fs"></img>
+        <div className="menu-row3" >
+          <div className="menu">
+            <img src={fs} className="fs" alt="fs"/>
             <p>Feedback & Suggestions</p>
           </div>
+
           <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
-            <img src={about} className="about"></img>
+            <img src={about} className="about" />
             <p>About Us</p>
           </div>
         </div>
+        
+      
 
         <div className="bottom-nav">
           <img src={set} className="set" onClick={handleSetting} style={{ cursor: "pointer" }}></img>

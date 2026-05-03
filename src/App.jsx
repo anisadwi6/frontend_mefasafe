@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import Lembar from "./pages/lembar";
 import Rs from "./pages/rs";
 import Settings from "./pages/Settings";
+import Konsul from "./pages/konsul";
+import DU from "./pages/DU";
+import DS from "./pages/DS";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/rs" element={<Rs />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/konsul" element={<Konsul />}/>
+        <Route path="/du" element={<DU />}/>
+        <Route path="/ds" element={<DS />}/>
       </Routes>
     </BrowserRouter>
   );

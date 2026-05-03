@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Settings.css";
 import logo from "../assets/logo.png";
 
@@ -13,13 +14,14 @@ import arrow from "../assets/Arrow.png";
 import chat from "../assets/chat.png";
 import prof from "../assets/prof.png";
 import not from "../assets/not.png";
-import set from "../assets/set.png";
-import hp from "../assets/hp.png";
+import settings from "../assets/Settings.png";
+import home from "../assets/home.png";
 
 function Settings() {
-const handleSetting = () => console.log("Setting");
+const navigate = useNavigate();
+const handleSetting = () => navigate("/settings");
 const handleNotifikasi = () => console.log("Notif");
-const handleHp = () => console.log("Home");
+const handleHp = () => navigate("/home");
 const handleChat = () => console.log("Chat");
 const handleProfil = () => console.log("Profil");
 
@@ -64,9 +66,9 @@ const handleProfil = () => console.log("Profil");
 
         {/* BOTTOM NAV */}
         <div className="bottom-nav-settings">
-                 <img src={set} className="set" onClick={handleSetting} style={{ cursor: "pointer" }}></img>
+                 <img src={settings} className="settings" onClick={handleSetting} style={{ cursor: "pointer" }}></img>
                  <img src={not} className="not" onClick={handleNotifikasi} style={{ cursor: "pointer" }}></img>
-                 <img src={hp} className="hp" onClick={handleHp} style={{ cursor: "pointer" }}></img>
+                 <img src={home} className="home" onClick={handleHp} style={{ cursor: "pointer" }}></img>
                  <img src={chat} className="chat" onClick={handleChat} style={{ cursor: "pointer" }}></img>
                  <img src={prof} className="prof" onClick={handleProfil} style={{ cursor: "pointer" }}></img>
         </div>

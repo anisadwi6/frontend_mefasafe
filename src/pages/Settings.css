@@ -8,12 +8,16 @@
 
 /* CONTAINER (BIAR KAYAK HP) */
 .phone-container {
+  height: 100vh;
   width: 100%;
   max-width: 400px;
-  background-color: #9ec3d6;
-  min-height: 100vh;
+  margin: 0 auto;
+
+  background: #B5E0F8;
+  display: flex;
+  flex-direction: column;
+  /* gap: 25px; */
   position: relative;
-  overflow: hidden;
 }
 
 /* HEADER */
@@ -22,19 +26,22 @@
 }
 
 .header img {
-  width: 140px;
+  position: absolute;
+  top: 20px;
+  left: 30px;   
+  width: 80px;
 }
 
 /* TITLE */
 .title-box {
   background-color: #2f6f7f;
-  color: white;
-  text-align: center;
+  color: #B5E0F8;
+  text-align: left;
   font-weight: bold;
   padding: 10px;
-  width: 200px;
-  margin: 0 auto 20px auto;
-  border-radius: 5px;
+  width: 130px;
+  margin: 15px 0 10px auto;
+  font-size: 20px;
 }
 
 /* MENU */
@@ -46,15 +53,16 @@
 
 /* ITEM MENU */
 .menu-item {
-  background-color: #eeeeee;
-  padding: 18px 16px;
+  background-color: white;
+  padding: 5px 16px;
+  color: black;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   /* strip biru seperti desain */
-  border-top: 12px solid #9ec3d6;
+  border-top: 12px solid #B5E0F8;
 }
 
 /* BAGIAN KIRI */
@@ -79,29 +87,22 @@
 
 /* ICON PANAH */
 .icon-right {
-  width: 28px;
+  width: 38px;
 }
 
 /* BOTTOM NAV */
 .bottom-nav-settings {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #6ea1b8;
-
+  background: #6d9db1;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-
-  padding: 10px 0;
+  padding: 2px;
 }
 
 /* ICON NAV */
 .bottom-nav-settings img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  cursor: pointer;
+  width: 10%;  
+  height: 80%;  
+  margin-top: 4px;
 }
 
 /* OPTIONAL: ACTIVE ICON */
