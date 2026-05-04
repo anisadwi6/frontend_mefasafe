@@ -38,19 +38,19 @@ export default function Konsul() {
             <p>Cari dokter, gejala, spesialis</p>
         </div>
 
-            <div className="konten">
+            <div className="konten" onClick={handleDU}>
+                <p className="DU">Klik untuk melanjutkan</p>
                 <img src={umum} className="du"></img>
                 <div className="konten1-1">
                     <p>DOKTER UMUM</p>
                 </div>
-                <button className="DU" onClick={handleDU}>Klik untuk melanjutkan</button>
             </div>
-            <div className="konten">
+            <div className="konten" onClick={handleDS}>
+                <p className="DS" onClick={handleDS}>Klik untuk melanjutkan</p> 
                 <img src={spesialis} className="ds"></img>
                 <div className="konten1-2">
                     <p>DOKTER SPESIALIS</p>
                 </div>
-                <button className="DS" onClick={handleDS}>Klik untuk melanjutkan</button>
             </div>
 
             <p className="quote">“Kesembuhan bukan hanya tentang tubuh, tapi

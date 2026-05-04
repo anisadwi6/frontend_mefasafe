@@ -1,0 +1,101 @@
+* {
+  font-family: "Aoboshi One", serif;
+}
+
+.DU-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  background: #B5E0F8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.logo-DU {
+  position: absolute;
+  top: 20px;
+  left: 30px;   
+  width: 80px;
+}
+
+.family-DU{
+  width: 65%;
+  max-width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.DU-header {
+  background: linear-gradient(to right, #C9FADA, #96BBFE);
+  padding: 80px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.DU-header h1{
+    color: black;
+    border: none;
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    font-size: 20px;
+}
+
+.pencarian-DU {
+    background-color: white;
+  border-radius: 13px;
+  height: 7%;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.pencarian-DU h3{
+    font-size: 12px;
+    position: absolute;
+    left: 80px;
+}
+.search {
+    width: 30px;
+    margin-top: 10px;
+    position: absolute;
+    top: 169px;
+    left: 35px;
+}
+
+.panah {
+    width: 30px;
+    margin-top: 11px;
+    position: absolute;
+    top: 170px;
+    left: 310px;
+}
+.close {
+    width: 25px;
+    margin-top: 7px;
+    position: absolute;
+    top: 173px;
+    left: 340px;
+}
+
+.konten-du{
+    background-color: #11607C;
+  border-radius: 25px;
+  height: 15%;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.kartika img{
+    width: 90px;
+    height: 80px;
+    position: absolute;
+    left: 40px;
+    margin-top: 10px;
+}

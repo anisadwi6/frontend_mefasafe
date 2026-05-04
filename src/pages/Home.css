@@ -44,13 +44,13 @@
   border-radius: 12px;
   width: 50%;
   position: absolute;
-  margin-top: 66px;
+  margin-top: 55px;
   text-align: left;
 }
 
 .card2 p{
-  font-size: 10px;
-  color: #11607C;
+  font-size: 11px;
+  color: white;
   line-height: 1.5;
 }
 

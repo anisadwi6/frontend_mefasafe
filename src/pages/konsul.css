@@ -98,7 +98,7 @@
 }
 
 .konten1-1 {
-    background-color: white;
+  background-color: white;
   border-radius: 10px;
   height: 4%;
   width: 35%;
@@ -121,8 +121,8 @@
   margin-top: 20px;
   text-align: left;
   position: absolute;
-  left: 170px;
-  top: 280px;
+  left: 180px;
+  top: 290px;
   font-size: 12px;
   color: white;
 }
@@ -151,8 +151,8 @@
   margin-top: 20px;
   text-align: left;
   position: absolute;
-  left: 170px;
-  bottom: 175px;
+  left: 180px;
+  bottom: 180px;
   font-size: 12px;
   color: white;
 }
