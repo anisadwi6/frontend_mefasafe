@@ -3,7 +3,7 @@
 }
 
 .DU-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -46,13 +46,14 @@
     font-size: 20px;
 }
 
-.pencarian-DU {
-    background-color: white;
-  border-radius: 13px;
-  height: 7%;
-  width: 90%;
+.pencarian-DU input{
   margin-top: 10px;
-  margin-left: 20px;
+  width: 65%;
+  padding: 14px 45px;
+  border-radius: 15px;
+  border: none;
+  background: white;
+  color: black;
 }
 
 .pencarian-DU h3{
@@ -83,19 +84,134 @@
     left: 340px;
 }
 
-.konten-du{
-    background-color: #11607C;
-  border-radius: 25px;
-  height: 15%;
-  width: 90%;
-  margin-top: 20px;
-  margin-left: 20px;
+.dokter-list {
+      padding: 4px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .dokter-card {
+      background: #11607C;
+      border-radius: 18px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    
+    .dokter-avatar {
+      width: 75px;
+      height: 75px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dokter-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Info */
+    .dokter-info {
+      flex: 1; 
+      text-align: left; 
+    }
+
+    .dokter-name {
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dokter-specialty {
+      color: #a8d8ea;
+      font-size: 11px;
+    }
+
+    .dokter-badges {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: white;
+      color: #11607C;
+      font-size: 8px;
+      padding: 0px 5px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .badge-icon {
+      font-size: 11px;
+    }
+
+    .dokter-price {
+      color: white;
+      font-size: 12px;
+    }
+
+    /* Action buttons */
+    .dokter-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .btn-action {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s;
+    }
+
+    .btn-action:hover {
+      transform: scale(1.08);
+    }
+
+.btn-action .material-symbols-outlined {
+  font-size: 18px;
+  color: #11607C;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+    .btn-action svg {
+      width: 18px;
+      height: 18px;
+      color: #11607C;
+    }
+
+.bottom-nav-du {
+  background: #6d9db1;
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  position: sticky;
+  bottom: 0;
 }
 
-.kartika img{
-    width: 90px;
-    height: 80px;
-    position: absolute;
-    left: 40px;
-    margin-top: 10px;
+.bottom-nav-du img {
+  width: 10%;  
+  height: 80%;  
+  margin-top: 4px;
 }
