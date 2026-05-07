@@ -35,10 +35,10 @@ export default function Chat() {
   const doctorImg = doctorImages[key] || rio;
   
   const handleSetting = () => navigate("/settings");
-  const handleNotifikasi = () => navigate("/rs");
+  const handleNotifikasi = () => navigate("/notifikasi");
   const handleHp = () => navigate("/home");
-  const handleChat = () => navigate("/rs");
-  const handleProfil = () => navigate("/rs");
+  const handleChatBot = () => navigate("/rs");
+  const handleProfil = () => navigate("/Profil");
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -141,7 +141,7 @@ export default function Chat() {
         <img
           src={chat}
           className="chat"
-          onClick={handleChat}
+          onClick={handleChatBot}
           style={{ cursor: "pointer" }}
         ></img>
         <img

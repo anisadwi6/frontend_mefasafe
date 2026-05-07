@@ -54,7 +54,7 @@ const handleProfil = () => navigate("/profil");
   ];
 
   return (
-    <div className="app-wrapper">
+    <div className="notifikasi-wrapper">
       <div className="notif-container">
 
         {/* HEADER */}

@@ -18,11 +18,11 @@ const navigate = useNavigate();
 const handleSetting = () => navigate("/settings");
 const handleNotifikasi = () => navigate("/notifikasi");
 const handleHp = () => navigate("/home");
-const handleChat = () => navigate("/chat");
+const handleChat = () => navigate("/Chat");
 const handleProfil = () => navigate("/profil");
 
  return (
-    <div className="app-wrapper">
+    <div className="wrapper">
       <div className="profil-container">
 
         {/* HEADER */}

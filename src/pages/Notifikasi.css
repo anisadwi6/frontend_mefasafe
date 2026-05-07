@@ -1,6 +1,5 @@
 /* WRAPPER */
-.app-wrapper {
- background-color: #111827;
+.notifikasi-wrapper {
   min-height: 100vh;
   display: flex;
   justify-content: center;

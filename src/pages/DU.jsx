@@ -23,8 +23,8 @@ export default function DU() {
   const handleSetting = () => navigate("/settings");
   const handleNotifikasi = () => navigate("/rs");
   const handleHp = () => navigate("/home");
-  const handleChat = () => navigate("/rs");
-  const handleProfil = () => navigate("/rs");
+  const handleChat = () => navigate("/chat");
+  const handleProfil = () => navigate("/profil");
   // const handleKonsul = () => navigate ("/konsul");
   return (
     <div className="DU-container">
@@ -142,7 +142,7 @@ export default function DU() {
             <div className="dokter-price">Rp. 25.000</div>
           </div>
           <div className="dokter-actions">
-            <button className="btn-action" title="Chat">
+            <button className="btn-action" title="Chat" onClick={handleChat}>
               <span className="material-symbols-outlined">chat</span>
             </button>
             <button className="btn-action" title="Telepon">

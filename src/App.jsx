@@ -7,6 +7,9 @@ import Settings from "./pages/Settings";
 import Konsul from "./pages/konsul";
 import DU from "./pages/DU";
 import DS from "./pages/DS";
+import Chat from "./pages/Chat";
+import Profil from "./pages/Profil";
+import Notifikasi from "./pages/Notifikasi";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/konsul" element={<Konsul />}/>
         <Route path="/du" element={<DU />}/>
         <Route path="/ds" element={<DS />}/>
+        <Route path="/chat" element={<Chat />}/>
+        <Route path="/profil"element={<Profil />}/>
+        <Route path="/notifikasi" element={<Notifikasi />}/>
       </Routes>
     </BrowserRouter>
   );

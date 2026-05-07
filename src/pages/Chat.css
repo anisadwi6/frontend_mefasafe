@@ -24,6 +24,7 @@ body {
 .chat-header {
   background: linear-gradient(135deg, #b6f0c8 0%, #8ecde6 100%);
   padding: 15px 15px 0;
+  height: 22%;
   flex-shrink: 0;
 }
 .header-top { display: flex; justify-content: space-between; align-items: center; }

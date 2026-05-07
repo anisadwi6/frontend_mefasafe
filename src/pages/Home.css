@@ -11,7 +11,6 @@
   background: #B5E0F8;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
   position: relative;
   
 }
@@ -33,11 +32,10 @@
 
 .home-header {
   background: linear-gradient(to right, #C9FADA, #96BBFE);
-  padding: 14px 20px;
+  padding: 10px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 120px;
   /* width: 60%; */
   /* margin: 0 auto; */
 }
@@ -84,42 +82,38 @@
   margin-top: 0px;
 }
 
-.menu-row1 {
-  margin-left: 25px;
-  margin-right: 20px;
+
+
+.menu-row1, .menu-row2, .menu-row3 {
   display: flex;
-  gap: 30px;   
-  font-size: 12px;   
-  color:black;      
-  line-height: 15px;     
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 12px;
+  color: black;
+  line-height: 15px;
+  margin-top: 20px;
+  width: 100%;
 }
 
-.menu-row2 {
-  margin-left: 25px;
-  margin-right: 20px;
+/* Setiap item dalam row */
+.homePage-menu .menu {
   display: flex;
-  gap: 30px;   
-  font-size: 12px;   
-  color:black;      
-  line-height: 15px;     
+  flex-direction: column;
+  align-items: center;  /* ← teks center di bawah gambar */
+  text-align: center;
+  width: 90px;
 }
 
-.menu-row3 {
-  margin-left: 70px;
-  display: flex;
-  gap: 10px;   
-  font-size: 12px;   
-  color:black;      
-  line-height: 15px;     
+.homePage-menu .menu img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
 }
 
-.rs, .pendaftaran{
-  width: 100px;
-  height: 100px;
-}
-
-.konsul, .kalender, .riwayat, .health, .fs, .about{
-  width: 100px;
+.homePage-menu .menu p {
+  margin: 6px 0 0 0;
+  font-size: 12px;
 }
 
 .bottom-nav {

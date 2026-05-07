@@ -1,6 +1,5 @@
 /* BACKGROUND LUAR */
-.app-wrapper {
-  background-color: #111827;
+.setting-wrapper {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,7 +7,7 @@
 
 /* CONTAINER (BIAR KAYAK HP) */
 .phone-container {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -16,7 +15,6 @@
   background: #B5E0F8;
   display: flex;
   flex-direction: column;
-  /* gap: 25px; */
   position: relative;
 }
 
@@ -48,7 +46,7 @@
 .menu {
   display: flex;
   flex-direction: column;
-  padding-bottom: 80px; /* biar tidak ketutup bottom nav */
+  flex: 1;
 }
 
 /* ITEM MENU */
@@ -62,7 +60,7 @@
   align-items: center;
 
   /* strip biru seperti desain */
-  border-top: 12px solid #B5E0F8;
+  border-top: 10px solid #B5E0F8;
 }
 
 /* BAGIAN KIRI */
@@ -98,6 +96,7 @@
   padding: 2px;
   position: sticky;
   bottom: 0;
+  line-height: 0;
 }
 
 /* ICON NAV */

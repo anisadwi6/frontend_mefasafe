@@ -16,13 +16,13 @@ import spesialis from "../assets/DS.png";
 
 export default function Konsul() {
   const navigate = useNavigate();
-  const handleSetting = () => navigate("/settings");
   const handleDU = () => navigate("/DU");
   const handleDS = () => navigate("/DS");
-  const handleNotifikasi = () => navigate("/rs");
-  const handleHp = () => navigate("/Home");
-  const handleChat = () => navigate("/rs");
-  const handleProfil = () => navigate("/rs");
+  const handleSetting = () => navigate("/settings");
+  const handleNotifikasi = () => navigate("/notifikasi");
+  const handleHp = () => navigate("/home");
+  const handleChatBot = () => navigate("/rs");
+  const handleProfil = () => navigate("/Profil");
   return (
     <div className="konsul-container">
       <div className="konsul-header">
@@ -90,7 +90,7 @@ export default function Konsul() {
         <img
           src={chat}
           className="chat"
-          onClick={handleChat}
+          onClick={handleChatBot}
           style={{ cursor: "pointer" }}
         ></img>
         <img

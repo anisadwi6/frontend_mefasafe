@@ -21,7 +21,7 @@ const navigate = useNavigate();
 const handleSetting = () => navigate("/settings");
 const handleNotifikasi = () => navigate("/notifikasi");
 const handleHp = () => navigate("/home");
-const handleChat = () => console.log("Chat");
+const handleChatBot = () => navigate("/rs");
 const handleProfil = () => navigate("/profil");
 
   const menu = [
@@ -36,7 +36,7 @@ const handleProfil = () => navigate("/profil");
   ];
 
   return (
-    <div className="app-wrapper">
+    <div className="setting-wrapper">
       <div className="phone-container">
 
         {/* HEADER */}
@@ -67,7 +67,7 @@ const handleProfil = () => navigate("/profil");
                  <img src={settings} className="settings" onClick={handleSetting} style={{ cursor: "pointer" }}></img>
                  <img src={not} className="not" onClick={handleNotifikasi} style={{ cursor: "pointer" }}></img>
                  <img src={home} className="home" onClick={handleHp} style={{ cursor: "pointer" }}></img>
-                 <img src={chat} className="chat" onClick={handleChat} style={{ cursor: "pointer" }}></img>
+                 <img src={chat} className="chat" onClick={handleChatBot} style={{ cursor: "pointer" }}></img>
                  <img src={prof} className="prof" onClick={handleProfil} style={{ cursor: "pointer" }}></img>
         </div>
 
