@@ -1,0 +1,142 @@
+.app-wrapper {
+  background-color: #111827;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.profil-container {
+  width: 100%;
+  max-width: 400px;
+  background: #B5E0F8;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* HEADER */
+.header img {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 80px;
+}
+
+.title-box {
+  background-color: #2f6f7f;
+  color: #B5E0F8;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px;
+  width: 100px;
+  margin: 10px 0 0 auto;
+  font-size: 15px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background-color: #1f6374;
+  margin: 10px 16px 20px;
+  padding: 16px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  color: white;
+}
+
+.profile-text h3 {
+  margin: 0;
+  font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-text p {
+  margin: 4px 0;
+  font-size: 12px;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid white;
+}
+
+/* SECTION TITLE */
+.section-title {
+   margin: 10px 16px;
+  font-size: 28px;
+  text-align: left;
+  font-weight: 600;
+  color: #1f6374;
+}
+
+/* POLIS CARD */
+.polis-card {
+  background-color: #1f6374;
+  margin: 10px 16px;
+  border-radius: 30px;
+  overflow: hidden;
+  color: white;
+  padding: 5px;
+  text-align: left;
+}
+
+.polis-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 14px;
+}
+
+.polis-item img {
+  width: 70px;
+}
+
+.polis-item h4 {
+  margin: 0;
+    font-size: 20px;
+    color: #B5E0F8;
+}
+
+.polis-item p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.polis-item span {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* BOTTOM NAV */
+.bottom-nav-profil {
+  background: #6d9db1;
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  position: sticky;
+  bottom: 0;
+}
+
+/* ICON NAV */
+.bottom-nav-profil img {
+  width: 10%;  
+  height: 80%;  
+  margin-top: 4px;
+}
+
+/* OPTIONAL: ACTIVE ICON */
+.bottom-nav-profil img:active {
+  transform: scale(0.9);
+}

@@ -56,6 +56,15 @@
   background: #eeeeee;
 }
 
+.input-group img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block; /*untuk menghapus gap di bawah img*/
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
 input {
   width: 250px;
   padding: 14px 16px;

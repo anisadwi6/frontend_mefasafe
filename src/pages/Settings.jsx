@@ -10,7 +10,6 @@ import favorite from "../assets/Favorit.png";
 import language from "../assets/Bahasa.png";
 import display from "../assets/Tampilan.png";
 import help from "../assets/Bantuan.png";
-import arrow from "../assets/Arrow.png";
 import chat from "../assets/chat.png";
 import prof from "../assets/prof.png";
 import not from "../assets/not.png";
@@ -20,10 +19,10 @@ import home from "../assets/home.png";
 function Settings() {
 const navigate = useNavigate();
 const handleSetting = () => navigate("/settings");
-const handleNotifikasi = () => console.log("Notif");
+const handleNotifikasi = () => navigate("/notifikasi");
 const handleHp = () => navigate("/home");
 const handleChat = () => console.log("Chat");
-const handleProfil = () => console.log("Profil");
+const handleProfil = () => navigate("/profil");
 
   const menu = [
     { title: "Edit Profil Pengguna", icon: edit },
@@ -46,7 +45,7 @@ const handleProfil = () => console.log("Profil");
         </div>
 
         {/* TITLE */}
-        <div className="title-box">
+        <div className="title-settings">
           Pengaturan
         </div>
 
@@ -59,7 +58,6 @@ const handleProfil = () => console.log("Profil");
                 <span>{item.title}</span>
               </div>
 
-              <img src={arrow} className="icon-right" />
             </div>
           ))}
         </div>

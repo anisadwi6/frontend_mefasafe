@@ -7,6 +7,8 @@ import Settings from "./pages/Settings";
 import Konsul from "./pages/konsul";
 import DU from "./pages/DU";
 import DS from "./pages/DS";
+import Notifikasi from "./pages/Notifikasi";
+import Profil from "./pages/Profil";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/konsul" element={<Konsul />}/>
         <Route path="/du" element={<DU />}/>
         <Route path="/ds" element={<DS />}/>
+        <Route path="/notifikasi" element={<Notifikasi />}/>
+        <Route path="/profil" element={<Profil />}/>
       </Routes>
     </BrowserRouter>
   );

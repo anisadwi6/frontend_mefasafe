@@ -25,10 +25,10 @@ export default function Home() {
   const handleKonsul = () => navigate("/konsul");
   const handleRs = () => navigate("/rs");
   const handleSetting = () => navigate("/settings");
-  const handleNotifikasi = () => navigate("/rs");
+  const handleNotifikasi = () => navigate("/notifikasi");
   const handleHp = () => navigate("/home");
   const handleChat = () => navigate("/rs");
-  const handleProfil = () => navigate("/rs");
+  const handleProfil = () => navigate("/profil");
   // const handleLogin = () => navigate("/Home");
 
   return (

@@ -8,7 +8,7 @@
 
 /* CONTAINER (BIAR KAYAK HP) */
 .phone-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -33,15 +33,15 @@
 }
 
 /* TITLE */
-.title-box {
+.title-settings {
   background-color: #2f6f7f;
   color: #B5E0F8;
   text-align: left;
   font-weight: bold;
   padding: 10px;
-  width: 130px;
-  margin: 15px 0 10px auto;
-  font-size: 20px;
+  width: 100px;
+  margin: 10px 0 0 auto;
+  font-size: 15px;
 }
 
 /* MENU */
@@ -96,6 +96,8 @@
   display: flex;
   justify-content: space-around;
   padding: 2px;
+  position: sticky;
+  bottom: 0;
 }
 
 /* ICON NAV */
