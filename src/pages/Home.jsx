@@ -82,14 +82,14 @@ export default function Home() {
             style={{ cursor: "pointer" }}
           >
             <img src={kalender} className="kalender"></img>
-            <p>Kalender Pengingat</p>
+            <p>Kalender <br></br>Pengingat</p>
           </div>
         </div>
 
         <div className="menu-row2">
           <div className="menu">
             <img src={riwayat} className="riwayat" alt="riwayat" />
-            <p>Riwayat Transaksi</p>
+            <p>Riwayat <br></br>Transaksi</p>
           </div>
 
           <div
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="menu-row3">
           <div className="menu">
             <img src={fs} className="fs" alt="fs" />
-            <p>Feedback & Suggestions</p>
+            <p>Feedback <br></br>& Suggestions</p>
           </div>
 
           <div className="menu">
