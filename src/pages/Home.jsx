@@ -24,6 +24,7 @@ export default function Home() {
   const navigate = useNavigate();
   const handleKonsul = () => navigate("/konsul");
   const handleRs = () => navigate("/rs");
+  const handleDaftar = () => navigate("/daftarRS");
   const handleSetting = () => navigate("/settings");
   const handleNotifikasi = () => navigate("/notifikasi");
   const handleHp = () => navigate("/home");
@@ -58,7 +59,7 @@ export default function Home() {
         <div className="menu-row1">
           <div
             className="menu"
-            onClick={handleRs}
+            onClick={handleDaftar}
             style={{ cursor: "pointer" }}
           >
             <img src={rs} className="rs" />

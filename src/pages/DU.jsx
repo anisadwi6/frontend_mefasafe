@@ -145,7 +145,7 @@ export default function DU() {
             <button className="btn-action" title="Chat" onClick={handleChat}>
               <span className="material-symbols-outlined">chat</span>
             </button>
-            <a href="https://call.whatsapp.com/voice/6vleG2mjluxABLJr5UsZge">
+            <a href="https://call.whatsapp.com/voice/GnTvm4NDSfrB9VuI1pe077">
               <button className="btn-action" title="Telepon">
                 <span className="material-symbols-outlined">call</span>
               </button>

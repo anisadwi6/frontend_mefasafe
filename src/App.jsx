@@ -10,6 +10,7 @@ import DS from "./pages/DS";
 import Chat from "./pages/Chat";
 import Profil from "./pages/Profil";
 import Notifikasi from "./pages/Notifikasi";
+import Daftar from "./pages/daftarRS";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/chat" element={<Chat />}/>
         <Route path="/profil"element={<Profil />}/>
         <Route path="/notifikasi" element={<Notifikasi />}/>
+        <Route path="/daftarRS" element={<Daftar/>}/>
       </Routes>
     </BrowserRouter>
   );
