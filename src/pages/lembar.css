@@ -17,7 +17,7 @@
   position: relative;
 }
 
-h1{
+.lembar h1{
     font-size: 18px;
   color: black;
   margin-top: 55px;
@@ -89,7 +89,7 @@ label {
   width: 80px;
 }
 
-.lembar-header h1 {
+.lembar-header  {
   font-size: 14px;
 }
 

@@ -3,7 +3,7 @@
 }
 
 .home-container {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -118,10 +118,8 @@
   display: flex;
   justify-content: space-around;
   padding: 2px;
-  position: absolute;
+  position: sticky;
   bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 .bottom-nav img {

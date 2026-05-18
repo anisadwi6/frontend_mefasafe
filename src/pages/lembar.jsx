@@ -15,7 +15,7 @@ function Lembar() {
             <img src={logo} alt="logo" className="logo" />
             <img src={family} alt="family" className="family-lembar" />
         </div>
-        <h1>LEMBAR PERSETUJUAN</h1>
+        <h1 className="lembar">LEMBAR PERSETUJUAN</h1>
             <ol>
                 <li>Saya mengajukan permohonan untuk menjadi peserta program asuransi di bawah Mefa Safe Insurance.</li>
                 <li>Saya telah membaca, memahami, dan menyetujui seluruh ketentuan, manfaat, pengecualian, serta biaya premi yang tercantum dalam dokumen informasi produk Mefa Safe Insurance.</li>

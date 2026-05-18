@@ -100,7 +100,7 @@ input {
   gap: 15px;
 }
 
-button {
+.button-group button {
   width: 48%;
   padding: 12px;
   border-radius: 14px;
