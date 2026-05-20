@@ -1,5 +1,6 @@
 import "./konsul.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import logo from "../assets/logo.png";
 import family from "../assets/family.png";
 import konsul from "../assets/konsul.png";
@@ -13,9 +14,11 @@ import set from "../assets/set.png";
 import hp from "../assets/hp.png";
 import umum from "../assets/DU.png";
 import spesialis from "../assets/DS.png";
+import { Menu } from "lucide-react";
 
 export default function Konsul() {
   const navigate = useNavigate();
+  const [showSidebar, setShowSidebar] = useState(false);
   const handleDU = () => navigate("/DU");
   const handleDS = () => navigate("/DS");
   const handleSetting = () => navigate("/settings");
@@ -26,19 +29,28 @@ export default function Konsul() {
   return (
     <div className="konsul-container">
       <div className="konsul-header">
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
+          style={{ cursor: "pointer" }}
+        >
+          <Menu />
+        </div>
         <img src={logo} className="logo-konsul" />
         <img src={family} className="family-konsul" />
         <img src={konsul} className="konsul-dokter" />
         <h1>Konsultasi Dokter</h1>
+        
       </div>
-      
+
       <div className="pencarian-DU">
         <img src={search} className="search" />
         <img src={panah} className="panah" />
         <img src={close} className="close" />
         <input
           type="text"
-          placeholder="Cari dokter, gejala, dan spesialis"></input>
+          placeholder="Cari dokter, gejala, dan spesialis"
+        ></input>
       </div>
 
       <div className="konsul-list">
@@ -68,37 +80,31 @@ export default function Konsul() {
         -MefaSafe
       </p>
 
-      <div className="bottom-nav-konsul">
-        <img
-          src={set}
-          className="set"
-          onClick={handleSetting}
+      <div className={`sidebar ${showSidebar ? "sidebar active" : "sidebar"}`}>
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
           style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={not}
-          className="not"
-          onClick={handleNotifikasi}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={hp}
-          className="hp"
-          onClick={handleHp}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={chat}
-          className="chat"
-          onClick={handleChatBot}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={prof}
-          className="prof"
-          onClick={handleProfil}
-          style={{ cursor: "pointer" }}
-        ></img>
+        >
+          <Menu />
+        </div>
+        <img className="logo-home" src={logo} alt="MefaSafe"></img>
+        <div className="list-sidebar">
+          <ul>
+            <li>
+              <a onClick={handleHp}>Home</a>
+            </li>
+            <li>
+              <a onClick={handleNotifikasi}>Notifikasi</a>
+            </li>
+            <li>
+              <a onClick={handleSetting}>ChatBot</a>
+            </li>
+            <li>
+              <a onClick={handleSetting}>Setting</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

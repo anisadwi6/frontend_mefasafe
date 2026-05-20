@@ -19,7 +19,7 @@ import hp from "../assets/hp.png";
 import eye from "../assets/Eye.png";
 import vector from "../assets/vector.png";
 import "./Home.css";
-import { Menu } from "lucide-react";
+import { Menu, Mail, Phone } from "lucide-react";
 
 export default function Home() {
   const [showSaldo, setShowSaldo] = useState(false);
@@ -158,57 +158,77 @@ export default function Home() {
       </div>
 
       <div className="footer">
-        <img src={logo} alt="MefaSafe"></img>
-        <div className="menu-grid">
-          <div className="menu-grid-item">
-            <img src={rs} alt="Rumah Sakit" />
-            <p>Daftar Rumah Sakit</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={konsul} alt="Konsultasi Dokter"></img>
-            <p>Konsultasi Dokter</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={kalender} alt="Kalender Pengingat"></img>
-            <p>Kalender Pengingat</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={fs} alt="Feedback & Suggestions"></img>
-            <p>Feedback & Suggestions</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={riwayat} alt="Riwayat Transaksi"></img>
-            <p>Riwayat Transaksi</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={health} alt="Health Service"></img>
-            <p>Health Service</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={pendaftaran} alt="Pendaftaran Pelayanan"></img>
-            <p>Pendaftaran Pelayanan</p>
-          </div>
-          <div className="menu-grid-item">
-            <img src={about} alt="About Us"></img>
-            <p>About Us</p>
-          </div>
-          <div className="menu-grid-content">
-            <div className="footer-menu-grid-content">
-              <h1>BANTUAN & PANDUAN</h1>
-              <ul>
-                <li>Pusat Bantuan</li>
-                <li>Syarat & Ketentuan</li>
-              </ul>
+        <img className="logo-footer" src={logo} alt="MefaSafe"></img>
+        <div className="footer-content">
+          <div className="footer-left">
+            <div className="footer-left-item" onClick={handleRs}>
+              <img src={rs} alt="Rumah Sakit" />
+              <p>Daftar Rumah Sakit</p>
             </div>
-            <div className="footer-menu-grid-content">
-              <h1>MEFASAFE</h1>
-              <ul>
-                <li>Tentang Kami</li>
-                <li>Promo Hari ini</li>
-              </ul>
+            <div className="footer-left-item" onClick={handleKonsul}>
+              <img src={konsul} alt="Konsultasi Dokter"></img>
+              <p>Konsultasi Dokter</p>
+            </div>
+            <div className="footer-left-item">
+              <img src={kalender} alt="Kalender Pengingat"></img>
+              <p>Kalender Pengingat</p>
+            </div>
+            <div className="footer-left-item">
+              <img src={fs} alt="Feedback & Suggestions"></img>
+              <p>Feedback & Suggestions</p>
+            </div>
+            <div className="footer-left-item">
+              <img src={riwayat} alt="Riwayat Transaksi"></img>
+              <p>Riwayat Transaksi</p>
+            </div>
+            <div className="footer-left-item" >
+              <img src={health} alt="Health Service"></img>
+              <p>Health Service</p>
+            </div>
+            <div className="footer-left-item">
+              <img src={pendaftaran} alt="Pendaftaran Pelayanan"></img>
+              <p>Pendaftaran Pelayanan</p>
+            </div>
+            <div className="footer-left-item">
+              <img src={about} alt="About Us"></img>
+              <p>About Us</p>
+            </div>
+          </div>
+          <div className="footer-right">
+            <div className="footer-right-content">
+              <div className="footer-right-item">
+                <h1>BANTUAN & PANDUAN</h1>
+                <ul>
+                  <li>Pusat Bantuan</li>
+                  <li>Syarat & Ketentuan</li>
+                </ul>
+              </div>
+              <div className="footer-right-item">
+                <h1>MEFASAFE</h1>
+                <ul>
+                  <li>Tentang Kami</li>
+                  <li>Promo Hari ini</li>
+                </ul>
+              </div>
+              <div className="footer-right-item">
+                <div className="bantuan">
+                  <div className="mail">
+                    <Mail />
+                    <p>bantuan@mefasafe.com</p>
+                  </div>
+                  <div className="phone">
+                    <Phone />
+                    <p>021-1234-5678</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        {/* <div className="contact">
+          <Mail>bantuan@mefasafe.com</Mail>
+          <Phone>021-1234-5678</Phone>
+        </div> */}
         <div className="copy-right">
           <footer>
             <p>&copy; 2026 MefaSafe Insurance. All rights reserved.</p>
