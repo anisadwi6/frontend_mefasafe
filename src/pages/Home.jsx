@@ -17,10 +17,13 @@ import not from "../assets/not.png";
 import set from "../assets/set.png";
 import hp from "../assets/hp.png";
 import eye from "../assets/Eye.png";
+import vector from "../assets/vector.png";
 import "./Home.css";
+import { Menu } from "lucide-react";
 
 export default function Home() {
   const [showSaldo, setShowSaldo] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
   const navigate = useNavigate();
   const handleKonsul = () => navigate("/konsul");
   const handleRs = () => navigate("/rs");
@@ -35,6 +38,13 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="home-header">
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
+          style={{ cursor: "pointer" }}
+        >
+          <Menu />
+        </div>
         <img src={logo} className="logo-home" />
         <img src={family} className="family-home" />
         <div className="card2">
@@ -63,9 +73,7 @@ export default function Home() {
             style={{ cursor: "pointer" }}
           >
             <img src={rs} className="rs" />
-            <p>
-              Daftar <br></br>Rumah Sakit
-            </p>
+            <p>Daftar Rumah Sakit</p>
           </div>
 
           <div
@@ -83,14 +91,19 @@ export default function Home() {
             style={{ cursor: "pointer" }}
           >
             <img src={kalender} className="kalender"></img>
-            <p>Kalender <br></br>Pengingat</p>
+            <p>Kalender Pengingat</p>
+          </div>
+
+          <div className="menu">
+            <img src={fs} className="fs" alt="fs" />
+            <p>Feedback & Suggestions</p>
           </div>
         </div>
 
         <div className="menu-row2">
           <div className="menu">
             <img src={riwayat} className="riwayat" alt="riwayat" />
-            <p>Riwayat <br></br>Transaksi</p>
+            <p>Riwayat Transaksi</p>
           </div>
 
           <div
@@ -110,14 +123,6 @@ export default function Home() {
             <img src={pendaftaran} className="pendaftaran"></img>
             <p>Pendaftaran Pelayanan</p>
           </div>
-        </div>
-
-        <div className="menu-row3">
-          <div className="menu">
-            <img src={fs} className="fs" alt="fs" />
-            <p>Feedback <br></br>& Suggestions</p>
-          </div>
-
           <div className="menu">
             <img src={about} className="about" />
             <p>About Us</p>
@@ -125,37 +130,90 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bottom-nav">
-        <img
-          src={set}
-          className="set"
-          onClick={handleSetting}
+      <div className={`sidebar ${showSidebar ? "sidebar active" : "sidebar"}`}>
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
           style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={not}
-          className="not"
-          onClick={handleNotifikasi}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={hp}
-          className="hp"
-          onClick={handleHp}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={chat}
-          className="chat"
-          onClick={handleChatBot}
-          style={{ cursor: "pointer" }}
-        ></img>
-        <img
-          src={prof}
-          className="prof"
-          onClick={handleProfil}
-          style={{ cursor: "pointer" }}
-        ></img>
+        >
+          <Menu />
+        </div>
+        <img className="logo-home" src={logo} alt="MefaSafe"></img>
+        <div className="list-sidebar">
+          <ul>
+            <li>
+              <a onClick={handleHp}>Home</a>
+            </li>
+            <li>
+              <a onClick={handleNotifikasi}>Notifikasi</a>
+            </li>
+            <li>
+              <a onClick={handleSetting}>ChatBot</a>
+            </li>
+            <li>
+              <a onClick={handleSetting}>Setting</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="footer">
+        <img src={logo} alt="MefaSafe"></img>
+        <div className="menu-grid">
+          <div className="menu-grid-item">
+            <img src={rs} alt="Rumah Sakit" />
+            <p>Daftar Rumah Sakit</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={konsul} alt="Konsultasi Dokter"></img>
+            <p>Konsultasi Dokter</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={kalender} alt="Kalender Pengingat"></img>
+            <p>Kalender Pengingat</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={fs} alt="Feedback & Suggestions"></img>
+            <p>Feedback & Suggestions</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={riwayat} alt="Riwayat Transaksi"></img>
+            <p>Riwayat Transaksi</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={health} alt="Health Service"></img>
+            <p>Health Service</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={pendaftaran} alt="Pendaftaran Pelayanan"></img>
+            <p>Pendaftaran Pelayanan</p>
+          </div>
+          <div className="menu-grid-item">
+            <img src={about} alt="About Us"></img>
+            <p>About Us</p>
+          </div>
+          <div className="menu-grid-content">
+            <div className="footer-menu-grid-content">
+              <h1>BANTUAN & PANDUAN</h1>
+              <ul>
+                <li>Pusat Bantuan</li>
+                <li>Syarat & Ketentuan</li>
+              </ul>
+            </div>
+            <div className="footer-menu-grid-content">
+              <h1>MEFASAFE</h1>
+              <ul>
+                <li>Tentang Kami</li>
+                <li>Promo Hari ini</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="copy-right">
+          <footer>
+            <p>&copy; 2026 MefaSafe Insurance. All rights reserved.</p>
+          </footer>
+        </div>
       </div>
     </div>
   );

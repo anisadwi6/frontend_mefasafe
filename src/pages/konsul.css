@@ -1,8 +1,8 @@
 .konsul-container {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  /* width: 100%;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto; */
 
   background: #b5e0f8;
   display: flex;

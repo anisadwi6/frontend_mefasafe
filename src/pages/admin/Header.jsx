@@ -8,7 +8,7 @@ import React from "react";
 
 function Header ({ sideBarCollapsed, onToggleSidebar }) {
     return (
-    <div className=" bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b
+    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b
     border-slate-200/50 dark:border-slate-700/50 px-6">
         <div className="!p-1 flex items-center justify-between">
             {/* left section */}
