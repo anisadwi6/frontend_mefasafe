@@ -1,229 +1,376 @@
+/* =========================
+   SETTINGS PAGE
+========================= */
 
-
-/* CONTAINER (BIAR KAYAK HP) */
-.phone-container {
-  height: 100vh;
-  max-width: 100%;
-  /* margin: 0 auto;  */ 
-
+.setting-wrapper{
+  min-height: 100vh;
   background: #B5E0F8;
-  display: flex;
-  flex-direction: column;
-  position: relative;
   overflow-x: hidden;
+  font-family: "Aoboshi One", serif;
 }
 
-/* HEADER */
-.header {
-  padding: 16px;
+.setting-wrapper .phone-container{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
-.header img {
+/* =========================
+   HEADER
+========================= */
+
+.setting-wrapper .header{
+
+  background: linear-gradient(
+    to right,
+    #C9FADA,
+    #96BBFE
+  );
+
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 20px;
+
+  position: relative;
+}
+
+/* LOGO */
+
+.setting-wrapper .header img{
+
+  width: 85px;
+
   position: absolute;
-  top: 20px;
-  left: 30px;   
-  width: 80px;
+
+  left: 70px;
+  top: 18px;
 }
 
-/* TITLE */
-.title-settings {
-  background-color: #2f6f7f;
-  color: #B5E0F8;
-  text-align: left;
+/* MENU ICON */
+
+.setting-wrapper .icon-menu-sidebar{
+
+  position: absolute;
+
+  top: 30px;
+  left: 20px;
+
+  z-index: 1000;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.setting-wrapper .title-settings{
+
+  background: #2f6f7f;
+
+  color: white;
+
+  width: fit-content;
+
+  margin-left: auto;
+
+  padding: 12px 28px;
+
+  border-radius: 0 0 0 18px;
+
+  font-size: 20px;
+
   font-weight: bold;
-  padding: 10px;
-  width: 100px;
-  margin: 10px 0 0 auto;
-  font-size: 15px;
 }
 
-/* MENU */
-.menu {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+/* =========================
+   MENU GRID
+========================= */
+
+.setting-wrapper .menu{
+
+  padding: 40px;
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 24px;
 }
 
-/* ITEM MENU */
-.menu-item {
-  background-color: white;
-  padding: 5px 16px;
-  color: black;
+/* CARD */
+
+.setting-wrapper .menu-item{
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.setting-wrapper .menu-item:hover{
+
+  transform: translateY(-5px);
+}
+
+/* LEFT */
+
+.setting-wrapper .left{
 
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
 
-  /* strip biru seperti desain */
-  border-top: 10px solid #B5E0F8;
+  gap: 20px;
 }
 
-/* BAGIAN KIRI */
-.left {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+/* ICON */
 
-/* ICON KIRI */
-.icon-left {
-  width: 45px;
-  height: 45px;
+.setting-wrapper .icon-left{
+
+  width: 60px;
+  height: 60px;
+
   object-fit: contain;
 }
 
 /* TEXT */
-.menu-item span {
-  font-size: 17px;
+
+.setting-wrapper .menu-item span{
+
+  font-size: 22px;
+
   font-weight: 600;
+
+  color: #1f6374;
 }
 
-/* ICON PANAH */
-.icon-right {
-  width: 38px;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.icon-menu-sidebar{
-  pad: 20px;
-}
+.setting-wrapper .footer{
 
-.sidebar {
-  width: 240px;
   background: #6d9db1;
-  position: fixed;
-  height: 100vh;
-  min-height: 100%;
-  padding : 10px 10px;
-  left: -100%;
-  transition: all 1s;
 
-}
+  margin-top: 60px;
 
-.sidebar.active{
-  left: 0;
-}
-.logo-sidebar {
-  display: flex;
-  gap: 10px;
-}
+  padding: 40px 30px;
 
-.logo-sidebar img{
-  width: 90px;
-}
-
-ul {
-  padding: 0;
-}
-
-ul li{
-  list-style-type: none;
-  margin: 10px 0;
-}
-
-ul li a{
   color: white;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 6px;
 }
 
-ul li a:hover, ul li a.active {
-  color: black;
-  background-color: #B5E0F8 ;
+/* FOOTER LOGO */
+
+.setting-wrapper .logo-footer{
+
+  width: 100px;
+
+  margin-bottom: 30px;
 }
 
-.footer {
-  background:#6d9db1 ;
-  width: 100%;
-  margin-top: 50px; 
-  font-size: 12px;
-}
+/* CONTENT */
 
-.logo-footer {
-  padding: 10px 10px;
-}
-.footer p{
+.setting-wrapper .footer-content{
+
   display: flex;
-  justify-content: space-around;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
 }
 
-.footer-left-item {
+/* LEFT SIDE */
+
+.setting-wrapper .footer-left{
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+/* ITEM */
+
+.setting-wrapper .footer-left-item{
+
   display: flex;
+
   align-items: center;
+
+  gap: 10px;
+
   background: white;
-  border-radius: 10px;      
-  padding: 5px 10px;
-  gap: 5px;
-  box-shadow: 0 2px 8px black;
+
+  border-radius: 12px;
+
+  padding: 10px;
+
+  color: black;
+
   cursor: pointer;
+
+  box-shadow:
+  0 2px 8px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
 }
 
-.footer-content img {
+.setting-wrapper .footer-left-item:hover{
+
+  transform: scale(1.03);
+}
+
+/* ICON */
+
+.setting-wrapper .footer-left-item img{
+
   width: 40px;
   height: 40px;
+
   object-fit: contain;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  flex-wrap: wrap;
-    cursor: pointer;
-}
+/* TEXT */
 
-.footer-left {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 12px;
-  margin-left: 20px;
-}
+.setting-wrapper .footer-left-item p{
 
-/* .footer-right {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  justify-content: right;
-  margin-left: 60px;
-  gap: 15px;
-} */
-
-.footer-right-content h1{
   font-size: 14px;
-  color: white;
+
+  margin: 0;
 }
 
-.footer-right-content {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  justify-content: right;
-  gap: 20px;
-  margin-left: 60px;
-}
-.bantuan {
-  color: white;
-}
-.mail {
+/* RIGHT SIDE */
+
+.setting-wrapper .footer-right-content{
+
   display: flex;
-  align-items: center;
-  gap: 5px;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
+}
+
+/* TITLE */
+
+.setting-wrapper .footer-right-item h1{
+
+  font-size: 16px;
+
   margin-bottom: 10px;
 }
 
-.phone {
+/* LIST */
+
+.setting-wrapper .footer-right-item ul{
+
+  padding-left: 18px;
+}
+
+.setting-wrapper .footer-right-item ul li{
+
+  margin-bottom: 8px;
+}
+.setting-wrapper .settings-sidebar{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #6d9db1;
+  padding: 20px;
+  z-index: 9999;
+  transition: 0.5s ease;
+}
+
+.setting-wrapper .settings-sidebar.active{
+  left: 0;
+}
+
+/* CONTACT */
+
+.setting-wrapper .mail,
+.setting-wrapper .phone{
+
   display: flex;
+
   align-items: center;
-  gap: 5px;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
 }
 
-.copy-right {
-  border-top: #11607C;
-  border-style:inherit;
-  margin: 20px;
-  color: white;
+/* COPYRIGHT */
+
+.setting-wrapper .copy-right{
+
+  border-top:
+  1px solid rgba(255,255,255,0.3);
+
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  text-align: center;
+
+  font-size: 14px;
 }
 
-/* OPTIONAL: ACTIVE ICON */
-.bottom-nav-settings img:active {
-  transform: scale(0.9);
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+  .setting-wrapper .menu{
+
+    padding: 20px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .setting-wrapper .menu-item{
+
+    padding: 18px;
+  }
+
+  .setting-wrapper .menu-item span{
+
+    font-size: 18px;
+  }
+
+  .setting-wrapper .footer-content{
+
+    flex-direction: column;
+  }
+
+  .setting-wrapper .footer-left{
+
+    grid-template-columns: 1fr;
+  }
+
+  .setting-wrapper .footer-right-content{
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
 }

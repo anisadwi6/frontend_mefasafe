@@ -85,9 +85,14 @@ const handleProfil = () => navigate("/profil");
           ))}
         </div>
 
-        <div className={`sidebar ${showSidebar ? "sidebar active" : "sidebar"}`}>
         <div
-          className="icon-menu-sidebar"
+  className={
+    showSidebar
+      ? "settings-sidebar active"
+      : "settings-sidebar"
+  }
+>         <div
+          className="settings-menu-sidebar"
           onClick={() => setShowSidebar(!showSidebar)}
           style={{ cursor: "pointer" }}
         >

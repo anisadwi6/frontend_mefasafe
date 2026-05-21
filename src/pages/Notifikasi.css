@@ -1,136 +1,282 @@
-/* WRAPPER */
-.notifikasi-wrapper {
+/* =========================
+   PAGE
+========================= */
+
+.notif-page{
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* CONTAINER MOBILE */
-.notif-container {
-  height: 100vh;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
   background: #B5E0F8;
+  overflow-x: hidden;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.notif-topbar{
+  height: 110px;
+
+  background: linear-gradient(
+    to right,
+    #C9FADA,
+    #96BBFE
+  );
+
   display: flex;
-  flex-direction: column;
-  /* gap: 25px; */
+  align-items: center;
+
+  padding: 0 25px;
+
   position: relative;
 }
 
-/* HEADER */
-.notif-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+/* MENU BUTTON */
+
+.notif-menu-btn{
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.header-img {
-  position: absolute;
-  top: 20px;
-  left: 30px;   
-  width: 80px;
+/* LOGO */
+
+.notif-logo{
+  width: 90px;
+
+  margin-left: 25px;
 }
 
-.text-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* =========================
+   SIDEBAR
+========================= */
 
+.notif-sidebar{
+  width: 240px;
 
-.title {
-  background-color: #2f6f7f;
-  color: #B5E0F8;
-  text-align: left;
-  font-weight: bold;
-  padding: 10px;
-  width: 100px;
-  margin: 10px 0 0 auto;
-  font-size: 15px;
-}
-
-/* TODAY */
-.today {
-  color: white;
-  background-color: #2f6f7f;
-  padding: 10px;
-  display: flex;
-}
-
-/* LIST */
-.notif-list {
-  margin-top: 10px;
-}
-
-.notif-item {
-  background: #ffffff;
-  display: flex;
-  align-items: flex-start;
-  padding: 14px;
-  margin: 10px 16px;
-  border-radius: 10px;
-  position: relative;
-  gap: 12px;
-}
-
-.notif-left {
-  width: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.icon {
-  width: 40px;
-  height: 30px;
-  object-fit: contain;
-  margin-right: 10px;
-}
-
-
-.text h4 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.text p {
-  margin: 4px;
-  font-size: 13px;
-  color: #333;
-}
-
-/* TIME */
-.time {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 12px;
-}
-
-/* NAV */
-.bottom-nav-notifikasi {
   background: #6d9db1;
-  display: flex;
-  justify-content: space-around;
-  padding: 2px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+
+  position: fixed;
+
+  top: 0;
+  left: -100%;
+
+  height: 100vh;
+
+  padding: 30px 20px;
+
+  transition: 0.5s;
+
+  z-index: 1000;
+}
+
+.notif-sidebar.active{
   left: 0;
 }
 
-/* ICON NAV */
-.bottom-nav-notifikasi img {
-  width: 10%;  
-  height: 80%;  
-  margin-top: 4px;
+/* SIDEBAR LIST */
+
+.notif-sidebar ul{
+  padding: 0;
+
+  margin-top: 80px;
 }
 
-/* OPTIONAL: ACTIVE ICON */
-.bottom-nav-notifikasi img:active {
-  transform: scale(0.9);
+.notif-sidebar ul li{
+  list-style: none;
+
+  margin: 14px 0;
+}
+
+.notif-sidebar ul li button{
+
+  width: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 17px;
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.notif-sidebar ul li button:hover,
+.notif-sidebar ul li button.active{
+
+  background: #B5E0F8;
+
+  color: black;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.notif-content{
+  padding: 45px;
+}
+
+/* TITLE */
+
+.notif-title h1{
+
+  color: #1f6374;
+
+  font-size: 42px;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   TAB
+========================= */
+
+.notif-tabs{
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.notif-tabs button{
+
+  border: none;
+
+  background: white;
+
+  padding: 12px 22px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.notif-tabs button.active{
+
+  background: #1f6374;
+
+  color: white;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.notif-list{
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+/* CARD */
+
+.notif-card{
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.notif-card:hover{
+
+  transform: translateY(-4px);
+}
+
+/* LEFT */
+
+.notif-left{
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.notif-left img{
+
+  width: 65px;
+  height: 65px;
+
+  object-fit: contain;
+}
+
+/* TEXT */
+
+.notif-text h4{
+
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #1f6374;
+}
+
+.notif-text p{
+
+  margin-top: 6px;
+
+  color: gray;
+
+  font-size: 14px;
+}
+
+/* TIME */
+
+.notif-time{
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .notif-content{
+    padding: 20px;
+  }
+
+  .notif-title h1{
+    font-size: 30px;
+  }
+
+  .notif-card{
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .notif-tabs{
+    flex-wrap: wrap;
+  }
+
 }
