@@ -6,7 +6,7 @@ import family from "../assets/family.png";
 import konsul from "../assets/konsul.png";
 import panah from "../assets/panah (2).png";
 import close from "../assets/Close.png";
-import search from "../assets/Search.png";
+import searchIcon from "../assets/Search.png";
 import chat from "../assets/chat.png";
 import prof from "../assets/prof.png";
 import not from "../assets/not.png";
@@ -18,6 +18,7 @@ import { Menu } from "lucide-react";
 
 export default function Konsul() {
   const navigate = useNavigate();
+  const [search, setSearch] = useState("");
   const [showSidebar, setShowSidebar] = useState(false);
   const handleDU = () => navigate("/DU");
   const handleDS = () => navigate("/DS");
@@ -43,22 +44,12 @@ export default function Konsul() {
         
       </div>
 
-      <div className="pencarian-DU">
-        <img src={search} className="search" />
-        <img src={panah} className="panah" />
-        <img src={close} className="close" />
-        <input
-          type="text"
-          placeholder="Cari dokter, gejala, dan spesialis"
-        ></input>
-      </div>
-
       <div className="konsul-list">
         <div className="konten" onClick={handleDU}>
           <img src={umum} className="konten-img"></img>
           <div className="konten-info">
             <div className="konten-judul">
-              <p>DOKTER UMUM</p>
+              <p>POLI UMUM</p>
             </div>
             <p className="konten-sub">Klik untuk melanjutkan</p>
           </div>
@@ -68,7 +59,67 @@ export default function Konsul() {
           <img src={spesialis} className="konten-img"></img>
           <div className="konten-info">
             <div className="konten-judul">
-              <p>DOKTER SPESIALIS</p>
+              <p>POLI GIGI</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI PENYAKIT DALAM</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+        
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI ANAK</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI THT</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+        
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI JIWA</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI PARU</p>
+            </div>
+            <p className="konten-sub">Klik untuk melanjutkan</p>
+          </div>
+        </div>
+
+        <div className="konten" onClick={handleDS}>
+          <img src={spesialis} className="konten-img"></img>
+          <div className="konten-info">
+            <div className="konten-judul">
+              <p>POLI SARAF</p>
             </div>
             <p className="konten-sub">Klik untuk melanjutkan</p>
           </div>

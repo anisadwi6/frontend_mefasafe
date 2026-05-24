@@ -13,6 +13,7 @@ import Notifikasi from "./pages/Notifikasi";
 import Daftar from "./pages/daftarRS";
 import Sidebar from "./pages/admin/Sidebar";
 import Header from "./pages/admin/Header";
+import RumahSakit from "./pages/admin/RumahSakit";
 import { useState } from "react";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 
@@ -23,7 +24,7 @@ function App() {
     // update all features to react-router-dom v6
     <BrowserRouter>
       <div
-        className=" hidden min-h-screen bg-gradient-to-br from-slate-50 via-blue-5o
+        className="hidden min-h-screen bg-gradient-to-br from-slate-50 via-blue-5o
         to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-all 
         duration-500">
           <div className="flex h-screen overflow-hidden"> 
@@ -33,6 +34,7 @@ function App() {
               <main className="flex-1 overflow-y-auto bg-transparent">
                 <div className="p-6 space-y-6">
                   {currentPage === "dashboard" && <Dashboard/>}
+                  {currentPage === "rumahsakit" && <RumahSakit/>}
                 </div>
               </main>
             </div>
@@ -51,6 +53,7 @@ function App() {
         <Route path="/profil" element={<Profil />} />
         <Route path="/notifikasi" element={<Notifikasi />} />
         <Route path="/daftarRS" element={<Daftar />} />
+        {/* <Route path="/RumahSakit" elemnt={<RumahSakit/>}/> */}
       </Routes>
     </BrowserRouter>
   );

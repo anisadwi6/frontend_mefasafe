@@ -12,6 +12,8 @@
   padding : 20px 10px;
   left: -100%;
   transition: all 1s;
+  z-index: 1000; 
+  top: 0;        
 
 }
 

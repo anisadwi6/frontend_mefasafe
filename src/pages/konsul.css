@@ -1,14 +1,10 @@
 .konsul-container {
   height: 100vh;
-  /* width: 100%;
-  max-width: 400px;
-  margin: 0 auto; */
-
   background: #b5e0f8;
   display: flex;
   flex-direction: column;
   position: relative;
-  flex: 1;
+  overflow-y: auto;
 }
 
 .logo-konsul {
@@ -29,9 +25,9 @@
 .konsul-header {
   background: linear-gradient(to right, #c9fada, #96bbfe);
   padding: 20px 10px;
-  width: 100%;
-  height: 25%;
-  margin: 0 auto;
+  position: relative;
+  height: fit-content;
+  min-height: 150px;
 }
 
 .konsul-dokter {
@@ -50,49 +46,11 @@
   font-size: 24px;
 }
 
-.pencarian {
-  background-color: white;
-  border-radius: 13px;
-  height: 7%;
-  width: 90%;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-.pencarian p {
-  margin-top: 10px;
-  position: absolute;
-  left: 70px;
-  font-size: 15px;
-}
-.search {
-  width: 30px;
-  margin-top: 10px;
-  position: absolute;
-  top: 169px;
-  left: 35px;
-}
-
-.panah {
-  width: 30px;
-  margin-top: 11px;
-  position: absolute;
-  top: 170px;
-  left: 310px;
-}
-.close {
-  width: 25px;
-  margin-top: 7px;
-  position: absolute;
-  top: 173px;
-  left: 340px;
-}
-
 .konsul-list {
       padding: 4px 16px 16px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
 .konten {
@@ -126,55 +84,7 @@
 .quote {
   color: black;
   font-size: 12px;
-  margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* .icon-menu-sidebar{
-  margin-top: 20px;
-} */
-/* .sidebar {
-  width: 240px;
-  background: #6d9db1;
-  position: fixed;
-  height: 100vh;
-  padding : 10px 10px;
-  transition: all 1s;
-  z-index: 10;
-} */
-
-.sidebar.active{
-  left: 0;
-}
-.logo-sidebar {
-  display: flex;
-  gap: 10px;
-}
-
-.logo-sidebar img{
-  width: 90px;
-}
-
-ul {
-  padding: 0;
-}
-
-ul li{
-  list-style-type: none;
-  margin: 10px 0;
-}
-
-ul li a{
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 6px;
-}
-
-ul li a:hover, ul li a.active {
-  color: black;
-  background-color: #B5E0F8 ;
+  text-align: center;
+  margin-top: auto;
+  padding: 16px;
 }

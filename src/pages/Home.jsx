@@ -17,7 +17,6 @@ import not from "../assets/not.png";
 import set from "../assets/set.png";
 import hp from "../assets/hp.png";
 import eye from "../assets/Eye.png";
-import vector from "../assets/vector.png";
 import "./Home.css";
 import { Menu, Mail, Phone } from "lucide-react";
 

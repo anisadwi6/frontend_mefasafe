@@ -10,10 +10,10 @@ function Header ({ sideBarCollapsed, onToggleSidebar }) {
     return (
     <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b
     border-slate-200/50 dark:border-slate-700/50 px-6">
-        <div className="!p-1 flex items-center justify-between">
+        <div className="p-1 flex items-center justify-between">
             {/* left section */}
             <div className="flex items-center space-x-4">
-                <button className="!p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 
+                <button className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 
                 dark:hover:bg-slate-800 transition-colors" onClick={onToggleSidebar}>
                     <Menu className="w-5 h-5"/>
                 </button>
@@ -36,10 +36,10 @@ function Header ({ sideBarCollapsed, onToggleSidebar }) {
             {/* right */}
             <div className="flex items-center gap-3">
                 {/* quick action */}
-                <button className="w-13 h-6 hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xs hover:shadow-lg transition-all">
+                {/* <button className="hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xs hover:shadow-lg transition-all">
                     <Plus className="w-4 h-4"/> 
                     <span className="text-sm font-medium">New</span>
-                </button>
+                </button> */}
                 {/* toggle */}
                 <button className="p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <Sun className="w-5 h-5"/>

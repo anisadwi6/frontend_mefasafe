@@ -3,22 +3,19 @@
 }
 
 .DU-container {
-  height: 100%;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  background: #B5E0F8;
+  height: 100vh;
+  background: #b5e0f8;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-y: auto;
   
 }
 
 .logo-DU {
   position: absolute;
   top: 20px;
-  left: 30px;   
+  left: 60px;   
   width: 80px;
 }
 
@@ -30,65 +27,28 @@
   right: 30px;
 }
 
+
 .DU-header {
-  background: linear-gradient(to right, #C9FADA, #96BBFE);
-  padding: 80px;
-  width: 100%;
-  margin: 0 auto;
+  background: linear-gradient(to right, #c9fada, #96bbfe);
+  padding: 20px 10px;
+  position: relative;
+  height: fit-content;
+  min-height: 150px;
 }
 
 .DU-header h1{
-    color: black;
-    border: none;
-    position: absolute;
-    top: 35px;
-    left: 100px;
-    font-size: 20px;
-}
-
-.pencarian-DU input{
-  margin-top: 10px;
-  width: 90%;
-  padding: 14px 45px;
-  border-radius: 15px;
-  border: none;
-  background: white;
   color: black;
+  border: none;
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  font-size: 24px;
 }
-
-.pencarian-DU h3{
-    font-size: 12px;
-    position: absolute;
-    left: 80px;
-}
-.search {
-    width: 30px;
-    margin-top: 10px;
-    position: absolute;
-    top: 169px;
-    left: 30px;
-}
-
-.panah {
-    width: 30px;
-    margin-top: 11px;
-    position: absolute;
-    top: 170px;
-    left: 310px;
-}
-.close {
-    width: 25px;
-    margin-top: 7px;
-    position: absolute;
-    top: 173px;
-    left: 340px;
-}
-
 .dokter-list {
       padding: 4px 16px 16px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+      display: grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap: 10px;
     }
 
     .dokter-card {
