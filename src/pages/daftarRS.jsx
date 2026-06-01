@@ -1,115 +1,318 @@
- import { useState } from "react";
+ import "./daftarRS.css";
+import { FaSearch, FaStar } from "react-icons/fa";
+import { Menu, Mail, Phone } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import logo from "../assets/logo.png";
-import family from "../assets/family.png";
-import rs from "../assets/rs.png";
-import set from "../assets/set.png";
-import not from "../assets/not.png";
-import hp from "../assets/hp.png";
-import chat from "../assets/chat.png";
-import prof from "../assets/prof.png";
-import "./daftarRS.css";
-import Search from "../assets/Search.png";
+import keluarga from "../assets/family.png";
+import rsIcon from "../assets/rs.png";
 
-const rumahSakitData = [
-  { id: 1, nama: "RS Gigi dan Mulut", alamat: "Jl. Semeru No. 12, Malang", rating: 4.5, ulasan: "Sangat membantu sekali, pelayanan sangat baik." },
-  { id: 2, nama: "RS Umum Malang", alamat: "Jl. Ijen No. 5, Malang", rating: 4.7, ulasan: "Rumah sakitnya bersih, fasilitasnya mantap." },
-  { id: 3, nama: "RSIA Melati Husada", alamat: "Jl. Kawi No. 32, Malang", rating: 4.3, ulasan: "Dokternya ramah dan profesional." },
-  { id: 4, nama: "IHC RS Sakit", alamat: "Jl. Veteran No. 11, Malang", rating: 4.6, ulasan: "Rumah sakit bagus, pelayanan cepat." },
-];
+import konsul from "../assets/konsul.png";
+import kalender from "../assets/kalender.png";
+import fs from "../assets/fs.png";
+import pendaftaran from "../assets/pendaftaran.png";
+import riwayat from "../assets/riwayat.png";
+import health from "../assets/health.png";
+import about from "../assets/about.png";
 
-const pins = [
-  { top: "20%", left: "25%" },
-  { top: "35%", left: "45%" },
-  { top: "55%", left: "30%" },
-  { top: "60%", left: "65%" },
-  { top: "25%", left: "70%" },
-];
+function DaftarRS() {
 
-export default function DaftarRumahSakit() {
-  const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  const handleSetting   = () => navigate("/settings");
-  const handleNotifikasi = () => navigate("/notifikasi");
-  const handleHp        = () => navigate("/home");
-  const handleChatBot   = () => navigate("/chat");
-  const handleProfil    = () => navigate("/profil");
+  const [search, setSearch] = useState("");
+  const [showSidebar, setShowSidebar] = useState(false);
 
-  const filtered = rumahSakitData.filter((item) =>
-    item.nama.toLowerCase().includes(search.toLowerCase()) ||
-    item.alamat.toLowerCase().includes(search.toLowerCase())
+  const handleHp = () => navigate("/home");
+  const handleNotifikasi = () => navigate("/notifikasi");
+  const handleSetting = () => navigate("/settings");
+  const handleRs = () => navigate("/daftarRS");
+  const handleKonsul = () => navigate("/konsul");
+
+  const dataRS = [
+    {
+      nama: "RS Lavalette",
+      alamat: "Jl. WR. Supratman No. 10, Malang",
+      rating: "4.4",
+      quote: "Pelayanan cepat dan sigap.",
+      maps: "https://maps.google.com/?q=RS+Lavalette+Malang",
+    },
+
+    {
+      nama: "RSIA Melati Husada",
+      alamat: "Jl. Kawi No. 32, Malang",
+      rating: "4.3",
+      quote: "Dokternya ramah dan profesional.",
+      maps: "https://maps.google.com/?q=RSIA+Melati+Husada+Malang",
+    },
+
+    {
+      nama: "RS Panti Nirmala",
+      alamat: "Jl. Kebalen Wetan No.2, Malang",
+      rating: "4.2",
+      quote: "Pelayanan ramah dan nyaman.",
+      maps: "https://maps.google.com/?q=RS+Panti+Nirmala+Malang",
+    },
+
+    {
+      nama: "RSUD Dr. Saiful Anwar",
+      alamat: "Jl. Jaksa Agung Suprapto No.2, Malang",
+      rating: "4.6",
+      quote: "Rumah sakit rujukan terbesar di Malang.",
+      maps: "https://maps.google.com/?q=RSSA+Malang",
+    },
+
+    {
+      nama: "RS Hermina Tangkubanprahu",
+      alamat: "Jl. Tangkuban Perahu No.31, Malang",
+      rating: "4.5",
+      quote: "Fasilitas modern dan bersih.",
+      maps: "https://maps.google.com/?q=RS+Hermina+Malang",
+    },
+
+    {
+      nama: "RS Universitas Brawijaya",
+      alamat: "Jl. Soekarno Hatta, Malang",
+      rating: "4.4",
+      quote: "Pelayanan cukup lengkap dan cepat.",
+      maps: "https://maps.google.com/?q=RSUB+Malang",
+    },
+  ];
+
+  const filteredRS = dataRS.filter((item) =>
+    item.nama.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <div className="rs-container">
+    <div className="daftar-rs">
 
-      {/* Header */}
-      <div className="rs-header">
-        <img src={logo} alt="logo" className="logo-rs" />
-        <img src={family} alt="family" className="family-rs" />
+      {/* HEADER */}
+      <div className="header-rs">
 
-        {/* Title di dalam header */}
-        <div className="rs-title-row">
-          <img src={rs} alt="rs" className="rs-title-icon" />
-          <span className="rs-title-text">Daftar Rumah Sakit</span>
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <Menu />
         </div>
-      </div>
+        <img src={logo} alt="logo" className="logo" />
+          <img src={keluarga} alt="family" className="keluarga" />
 
-      {/* Map Placeholder */}
-      <div className="rs-map">
-        <div className="rs-map-grid" />
-        <div className="rs-map-label">📍 Peta Rumah Sakit</div>
-        {pins.map((pos, i) => (
-          <div key={i} className="rs-pin" style={{ top: pos.top, left: pos.left }}>
-            <div className="rs-pin-inner">H</div>
+        <div className="header-left">
+          
+
+          <div className="judul-rs">
+            <img src={rsIcon} alt="rs" className="icon-rs" />
+            <h1>Daftar Rumah Sakit</h1>
           </div>
-        ))}
-        <div className="rs-my-location" />
+        </div>
+
+        
       </div>
 
-      {/* Search */}
-      <div className="rs-search-wrapper">
-        <img src={Search} alt="search" className="rs-search-icon" />
+      {/* SEARCH */}
+      <div className="search-box">
+        <FaSearch className="search-icon" />
+
         <input
-          className="rs-search-input"
+          type="text"
           placeholder="Cari rumah sakit..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        {search && (
-          <span className="rs-clear-btn" onClick={() => setSearch("")}>✕</span>
-        )}
       </div>
 
-      {/* List */}
-      <div className="rs-list-area">
-        {filtered.length === 0 ? (
-          <div className="rs-empty">Rumah sakit tidak ditemukan</div>
-        ) : (
-          filtered.map((item) => (
-            <div key={item.id} className="rs-card">
-              <img src={rs} alt="rs" className="rs-card-icon" />
-              <div className="rs-card-info">
-                <div className="rs-card-nama">{item.nama}</div>
-                <div className="rs-card-alamat">{item.alamat}</div>
-                <div className="rs-card-ulasan">"{item.ulasan}"</div>
-                <div className="rs-card-rating">{"⭐".repeat(Math.round(item.rating))} {item.rating}</div>
+      {/* CARD */}
+      <div className="container-card">
+
+        {filteredRS.map((item, index) => (
+
+          <a
+            href={item.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+            key={index}
+          >
+
+            <div className="card-rs">
+
+              <img src={rsIcon} alt="rs" className="img-card" />
+
+              <div className="info-rs">
+
+                <h2>{item.nama}</h2>
+
+                <p>{item.alamat}</p>
+
+                <span>"{item.quote}"</span>
+
+                <div className="rating">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+
+                  <strong>{item.rating}</strong>
+                </div>
+
               </div>
+
             </div>
-          ))
-        )}
+
+          </a>
+
+        ))}
+
       </div>
 
-      {/* Navbar */}
-      <div className="bottom-nav">
-        <img src={set}  className="set"  onClick={handleSetting}    style={{ cursor: "pointer" }} alt="setting" />
-        <img src={not}  className="not"  onClick={handleNotifikasi} style={{ cursor: "pointer" }} alt="notifikasi" />
-        <img src={hp}   className="hp"   onClick={handleHp}         style={{ cursor: "pointer" }} alt="home" />
-        <img src={chat} className="chat" onClick={handleChatBot}    style={{ cursor: "pointer" }} alt="chat" />
-        <img src={prof} className="prof" onClick={handleProfil}     style={{ cursor: "pointer" }} alt="profil" />
+      {/* FOOTER QUOTE */}
+      <div className="footer-rs">
+        “Kesembuhan bukan hanya tentang tubuh,
+        tapi juga kekuatan dalam dirimu.”
+        -MefaSafe
+      </div>
+
+      {/* SIDEBAR */}
+      <div className={`sidebar ${showSidebar ? "active" : ""}`}>
+
+        <div
+          className="icon-menu-sidebar"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <Menu />
+        </div>
+
+        <img className="riwayat-logo" src={logo} alt="MefaSafe" />
+
+        <div className="list-sidebar">
+
+          <ul>
+            <li><a onClick={handleHp}>Home</a></li>
+            <li><a onClick={handleNotifikasi}>Notifikasi</a></li>
+            <li><a onClick={handleSetting}>ChatBot</a></li>
+            <li><a onClick={handleSetting}>Setting</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      {/* FOOTER */}
+      <div className="footer">
+
+        <img className="logo-footer" src={logo} alt="MefaSafe" />
+
+        <div className="footer-content">
+
+          <div className="footer-left">
+
+            <div className="footer-left-item" onClick={handleRs}>
+              <img src={rsIcon} alt="Rumah Sakit" />
+              <p>Daftar Rumah Sakit</p>
+            </div>
+
+            <div className="footer-left-item" onClick={handleKonsul}>
+              <img src={konsul} alt="Konsultasi Dokter" />
+              <p>Konsultasi Dokter</p>
+            </div>
+
+            <div className="footer-left-item">
+              <img src={kalender} alt="Kalender Pengingat" />
+              <p>Kalender Pengingat</p>
+            </div>
+
+            <div className="footer-left-item">
+              <img src={fs} alt="Feedback" />
+              <p>Feedback & Suggestions</p>
+            </div>
+
+            <div
+              className="footer-left-item"
+              onClick={() => navigate("/riwayat")}
+            >
+              <img src={riwayat} alt="Riwayat" />
+              <p>Riwayat Transaksi</p>
+            </div>
+
+            <div className="footer-left-item">
+              <img src={health} alt="Health Service" />
+              <p>Health Service</p>
+            </div>
+
+            <div className="footer-left-item">
+              <img src={pendaftaran} alt="Pendaftaran" />
+              <p>Pendaftaran Pelayanan</p>
+            </div>
+
+            <div className="footer-left-item">
+              <img src={about} alt="About Us" />
+              <p>About Us</p>
+            </div>
+
+          </div>
+
+          <div className="footer-right">
+
+            <div className="footer-right-content">
+
+              <div className="footer-right-item">
+
+                <h1>BANTUAN & PANDUAN</h1>
+
+                <ul>
+                  <li>Pusat Bantuan</li>
+                  <li>Syarat & Ketentuan</li>
+                </ul>
+
+              </div>
+
+              <div className="footer-right-item">
+
+                <h1>MEFASAFE</h1>
+
+                <ul>
+                  <li>Tentang Kami</li>
+                  <li>Promo Hari ini</li>
+                </ul>
+
+              </div>
+
+              <div className="footer-right-item">
+
+                <div className="bantuan">
+
+                  <div className="mail">
+                    <Mail />
+                    <p>bantuan@mefasafe.com</p>
+                  </div>
+
+                  <div className="phone">
+                    <Phone />
+                    <p>021-1234-5678</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="copy-right">
+          <footer>
+            <p>&copy; 2026 MefaSafe Insurance. All rights reserved.</p>
+          </footer>
+        </div>
+
       </div>
 
     </div>
   );
 }
+
+export default DaftarRS;

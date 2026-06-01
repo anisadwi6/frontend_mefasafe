@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+* {
+  font-family: "Aoboshi One", serif;
+}
 .icon-menu-sidebar{
   margin-top: 0px;
 }

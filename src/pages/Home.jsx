@@ -1,4 +1,4 @@
-import { useState } from "react";
+ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import family from "../assets/family.png";
@@ -11,11 +11,6 @@ import konsul from "../assets/konsul.png";
 import pendaftaran from "../assets/pendaftaran.png";
 import riwayat from "../assets/riwayat.png";
 import rs from "../assets/rs.png";
-import chat from "../assets/chat.png";
-import prof from "../assets/prof.png";
-import not from "../assets/not.png";
-import set from "../assets/set.png";
-import hp from "../assets/hp.png";
 import eye from "../assets/Eye.png";
 import "./Home.css";
 import { Menu, Mail, Phone } from "lucide-react";
@@ -24,175 +19,138 @@ export default function Home() {
   const [showSaldo, setShowSaldo] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const navigate = useNavigate();
-  const handleKonsul = () => navigate("/konsul");
-  const handleRs = () => navigate("/rs");
-  const handleDaftar = () => navigate("/daftarRS");
-  const handleSetting = () => navigate("/settings");
+
+  const handleKonsul    = () => navigate("/konsul");
+  const handleRs        = () => navigate("/rs");
+  const handleDaftar    = () => navigate("/daftarRS");
+  const handleSetting   = () => navigate("/settings");
   const handleNotifikasi = () => navigate("/notifikasi");
-  const handleHp = () => navigate("/home");
-  const handleChatBot = () => navigate("/rs");
-  const handleProfil = () => navigate("/Profil");
-  // const handleLogin = () => navigate("/Home");
+  const handleHp        = () => navigate("/home");
+  const handleProfil    = () => navigate("/Profil");
+  const handleHealthService = () => navigate ("/HealthService");
+
 
   return (
     <div className="home-container">
+
+      {/* Header */}
       <div className="home-header">
-        <div
-          className="icon-menu-sidebar"
-          onClick={() => setShowSidebar(!showSidebar)}
-          style={{ cursor: "pointer" }}
-        >
+        <div className="icon-menu-sidebar" onClick={() => setShowSidebar(!showSidebar)} style={{ cursor: "pointer" }}>
           <Menu />
         </div>
-        <img src={logo} className="logo-home" />
-        <img src={family} className="family-home" />
+        <img src={logo} className="logo-home" alt="logo" />
+        <img src={family} className="family-home" alt="family" />
         <div className="card2">
-          <p>
-            SELAMAT PAGI,
-            <br />
-            MEZALUNA DIAZZURI
-          </p>
+          <p>SELAMAT PAGI,<br />MEZALUNA DIAZZURI</p>
           <div className="saldo-row">
             <div className="hide" onClick={() => setShowSaldo(!showSaldo)}>
-              {showSaldo ? <img src={eye}></img> : <img src={hide}></img>}
+              {showSaldo ? <img src={eye} alt="eye" /> : <img src={hide} alt="hide" />}
             </div>
-            <p className="saldo">
-              {showSaldo ? "Rp. 105.000.000" : "Rp. *********"}
-            </p>
+            <p className="saldo">{showSaldo ? "Rp. 105.000.000" : "Rp. *********"}</p>
           </div>
           <p className="status">ACTIVE</p>
         </div>
       </div>
 
+      {/* Menu */}
       <div className="homePage-menu">
         <div className="menu-row1">
-          <div
-            className="menu"
-            onClick={handleDaftar}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={rs} className="rs" />
+          <div className="menu" onClick={handleDaftar} style={{ cursor: "pointer" }}>
+            <img src={rs} className="rs" alt="rs" />
             <p>Daftar Rumah Sakit</p>
           </div>
-
-          <div
-            className="menu"
-            onClick={handleKonsul}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={konsul} className="konsul" />
+          <div className="menu" onClick={handleKonsul} style={{ cursor: "pointer" }}>
+            <img src={konsul} className="konsul" alt="konsul" />
             <p>Konsultasi Dokter</p>
           </div>
-
-          <div
-            className="menu"
-            onClick={() => alert("Ikon ditekan!")}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={kalender} className="kalender"></img>
+          <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
+            <img src={kalender} className="kalender" alt="kalender" />
             <p>Kalender Pengingat</p>
           </div>
-
-          <div className="menu">
+          <div className="menu" style={{ cursor: "pointer" }}>
             <img src={fs} className="fs" alt="fs" />
             <p>Feedback & Suggestions</p>
           </div>
         </div>
 
         <div className="menu-row2">
-          <div className="menu">
+          <div className="menu" onClick={() => navigate("/riwayat")} style={{ cursor: "pointer" }}>
             <img src={riwayat} className="riwayat" alt="riwayat" />
             <p>Riwayat Transaksi</p>
           </div>
-
-          <div
-            className="menu"
-            onClick={() => alert("Ikon ditekan!")}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={health} className="health" />
+          <div className="menu" onClick={handleHealthService} style={{ cursor: "pointer" }}>
+            <img src={health} className="health" alt="health" />
             <p>Health Service</p>
           </div>
-
-          <div
-            className="menu"
-            onClick={() => alert("Ikon ditekan!")}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={pendaftaran} className="pendaftaran"></img>
+          <div className="menu" onClick={() => alert("Ikon ditekan!")} style={{ cursor: "pointer" }}>
+            <img src={pendaftaran} className="pendaftaran" alt="pendaftaran" />
             <p>Pendaftaran Pelayanan</p>
           </div>
-          <div className="menu">
-            <img src={about} className="about" />
+          <div className="menu" style={{ cursor: "pointer" }}>
+            <img src={about} className="about" alt="about" />
             <p>About Us</p>
           </div>
         </div>
       </div>
 
-      <div className={`sidebar ${showSidebar ? "sidebar active" : "sidebar"}`}>
-        <div
-          className="icon-menu-sidebar"
-          onClick={() => setShowSidebar(!showSidebar)}
-          style={{ cursor: "pointer" }}
-        >
+      {/* Sidebar */}
+      <div className={`sidebar ${showSidebar ? "active" : ""}`}>
+        <div className="icon-menu-sidebar" onClick={() => setShowSidebar(!showSidebar)} style={{ cursor: "pointer" }}>
           <Menu />
         </div>
-        <img className="logo-home" src={logo} alt="MefaSafe"></img>
+        <img className="logo-home" src={logo} alt="MefaSafe" />
         <div className="list-sidebar">
           <ul>
-            <li>
-              <a onClick={handleHp}>Home</a>
-            </li>
-            <li>
-              <a onClick={handleNotifikasi}>Notifikasi</a>
-            </li>
-            <li>
-              <a onClick={handleSetting}>ChatBot</a>
-            </li>
-            <li>
-              <a onClick={handleSetting}>Setting</a>
-            </li>
+            <li><a onClick={handleHp}>Home</a></li>
+            <li><a onClick={handleNotifikasi}>Notifikasi</a></li>
+            <li><a onClick={handleSetting}>ChatBot</a></li>
+            <li><a onClick={handleSetting}>Setting</a></li>
           </ul>
         </div>
       </div>
 
+      {/* Footer */}
       <div className="footer">
-        <img className="logo-footer" src={logo} alt="MefaSafe"></img>
+        <img className="logo-footer" src={logo} alt="MefaSafe" />
         <div className="footer-content">
+
+          {/* Footer Left */}
           <div className="footer-left">
-            <div className="footer-left-item" onClick={handleRs}>
+            <div className="footer-left-item" onClick={handleRs} style={{ cursor: "pointer" }}>
               <img src={rs} alt="Rumah Sakit" />
               <p>Daftar Rumah Sakit</p>
             </div>
-            <div className="footer-left-item" onClick={handleKonsul}>
-              <img src={konsul} alt="Konsultasi Dokter"></img>
+            <div className="footer-left-item" onClick={handleKonsul} style={{ cursor: "pointer" }}>
+              <img src={konsul} alt="Konsultasi Dokter" />
               <p>Konsultasi Dokter</p>
             </div>
             <div className="footer-left-item">
-              <img src={kalender} alt="Kalender Pengingat"></img>
+              <img src={kalender} alt="Kalender Pengingat" />
               <p>Kalender Pengingat</p>
             </div>
             <div className="footer-left-item">
-              <img src={fs} alt="Feedback & Suggestions"></img>
+              <img src={fs} alt="Feedback & Suggestions" />
               <p>Feedback & Suggestions</p>
             </div>
-            <div className="footer-left-item">
-              <img src={riwayat} alt="Riwayat Transaksi"></img>
+            <div className="footer-left-item" onClick={() => navigate("/riwayat")} style={{ cursor: "pointer" }}>
+              <img src={riwayat} alt="Riwayat Transaksi" />
               <p>Riwayat Transaksi</p>
             </div>
-            <div className="footer-left-item" >
-              <img src={health} alt="Health Service"></img>
+            <div className="footer-left-item" onClick={handleHealthService} style={{ cursor: "pointer" }}>
+              <img src={health} alt="Health Service" />
               <p>Health Service</p>
             </div>
             <div className="footer-left-item">
-              <img src={pendaftaran} alt="Pendaftaran Pelayanan"></img>
+              <img src={pendaftaran} alt="Pendaftaran Pelayanan" />
               <p>Pendaftaran Pelayanan</p>
             </div>
             <div className="footer-left-item">
-              <img src={about} alt="About Us"></img>
+              <img src={about} alt="About Us" />
               <p>About Us</p>
             </div>
           </div>
+
+          {/* Footer Right */}
           <div className="footer-right">
             <div className="footer-right-content">
               <div className="footer-right-item">
@@ -223,17 +181,16 @@ export default function Home() {
               </div>
             </div>
           </div>
+
         </div>
-        {/* <div className="contact">
-          <Mail>bantuan@mefasafe.com</Mail>
-          <Phone>021-1234-5678</Phone>
-        </div> */}
+
         <div className="copy-right">
           <footer>
             <p>&copy; 2026 MefaSafe Insurance. All rights reserved.</p>
           </footer>
         </div>
       </div>
+
     </div>
   );
 }

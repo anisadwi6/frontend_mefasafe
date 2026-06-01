@@ -57,16 +57,77 @@ export default function Chat() {
   };
 
   const sendMessage = () => {
-    if (!input.trim()) return;
-    setMessages((prev) => [...prev, { text: input, sender: "user" }]);
-    setInput("");
-    setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        { text: "Baik, saya pahami keluhannya.", sender: "doctor" },
-      ]);
-    }, 1000);
-  };
+  if (!input.trim()) return;
+
+  const userMessage = input;
+
+  setMessages((prev) => [
+    ...prev,
+    { text: userMessage, sender: "user" },
+  ]);
+
+  setInput("");
+
+  setTimeout(() => {
+    let reply = "";
+
+    const pesan = userMessage.toLowerCase();
+
+    if (
+      pesan.includes("demam") ||
+      pesan.includes("panas")
+    ) {
+      reply =
+        "Apakah disertai batuk atau sakit tenggorokan?";
+    }
+
+    else if (
+      pesan.includes("batuk")
+    ) {
+      reply =
+        "Sudah berapa hari batuknya dirasakan?";
+    }
+
+    else if (
+      pesan.includes("pusing")
+    ) {
+      reply =
+        "Apakah pusingnya muncul terus menerus atau sesekali?";
+    }
+
+    else if (
+      pesan.includes("sakit perut")
+    ) {
+      reply =
+        "Apakah ada mual atau diare juga?";
+    }
+
+    else if (
+      pesan.includes("flu")
+    ) {
+      reply =
+        "Perbanyak istirahat dan minum air hangat ya.";
+    }
+
+    else if (
+      pesan.includes("halo") ||
+      pesan.includes("hai")
+    ) {
+      reply =
+        "Halo juga, silakan ceritakan keluhan anda.";
+    }
+
+    else {
+      reply =
+        "Baik, bisa dijelaskan lebih detail keluhannya?";
+    }
+
+    setMessages((prev) => [
+      ...prev,
+      { text: reply, sender: "doctor" },
+    ]);
+  }, 1000);
+};
 
   return (
     <div className="page-wrapper">
@@ -84,7 +145,7 @@ export default function Chat() {
       </header>
 
       <div className="doctor-section">
-        <p className="timer">Sisa Waktu: {formatTime(timeLeft)}</p>
+        <p className="timer">Sisa Waktu {formatTime(timeLeft)}</p>
         <div className="doctor-card">
           <img src={doctorImg} alt="doctor" className="doctor-avatar" />
           <div className="doctor-info">

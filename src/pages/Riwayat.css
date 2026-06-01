@@ -1,0 +1,193 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #b7def1;
+}
+
+.riwayat-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #b7def1;
+}
+
+.riwayat-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #b7def1;
+  display: flex;
+  flex-direction: column;
+}
+
+.riwayat-header {
+  background: linear-gradient(135deg, #c6f0cb, #99c6ff);
+  padding: 20px 10px;
+}
+
+.header-top-riwayat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-container {
+  height: 100vh;
+  max-width: 100%;
+  /* margin: 0 auto;  */ 
+
+  background: #B5E0F8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.riwayat-logo{
+  position: absolute;
+  top: 20px;
+  left: 60px; 
+  width: 80px;
+}
+
+.keluarga-home{
+  max-width: 80px;
+  position: absolute;
+  top: 20px;
+  right: 30px;}
+
+.header-bottom {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.transaksi-img {
+  width: 120px;
+}
+
+.header-bottom h1 {
+  font-size: 40px;
+  color: #16335c;
+  font-weight: bold;
+}
+
+.riwayat-list {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.riwayat-card {
+  background: #b7def1;
+  border: 2px solid #6c8597;
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.riwayat-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.status-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.success {
+  background: #4b9820;
+}
+
+.warning {
+  background: #f0bc1f;
+}
+
+.card-left h3 {
+  font-size: 30px;
+  color: #111827;
+}
+
+.card-left p {
+  margin-top: 6px;
+  color: #333;
+  font-size: 20px;
+}
+
+.card-right {
+  font-size: 28px;
+  font-weight: bold;
+  color: #111827;
+}
+
+@media (max-width: 760px) {
+  .riwayat-header {
+    padding: 20px;
+  }
+
+  .riwayat-logo {
+    width: 70px;
+  }
+
+  .keluarga {
+    width: 70px;
+  }
+
+  .header-bottom {
+    gap: 15px;
+  }
+
+  .transaksi-img {
+    width: 60px;
+  }
+
+  .header-bottom h1 {
+    font-size: 25px;
+  }
+
+  .riwayat-list {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .riwayat-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .card-left h3 {
+    font-size: 18px;
+  }
+
+  .card-left p {
+    font-size: 13px;
+  }
+
+  .card-right {
+    font-size: 18px;
+  }
+
+  .status-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }}

@@ -1,0 +1,224 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;  /* balik ke Arial */
+}
+
+.health-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #d6e8f4;
+}
+
+.hero-section {
+  width: 100%;
+  background: linear-gradient(to right, #d8f0df, #a8c3ff);
+  padding: 40px 60px;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 70px;
+}
+
+.logo-area p {
+  color: #0b3c4c;
+  font-size: 16px;
+  font-weight: 700; /* Bold untuk nama brand */
+  line-height: 1.2;
+}
+
+.family-img {
+  width: 105px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.health-img {
+  width: 120px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: #000000;
+  font-weight: 700; /* Tebal tegas untuk judul utama */
+  letter-spacing: -0.5px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #333;
+  font-weight: 400; /* Regular untuk sub-judul */
+  margin-top: 5px;
+}
+
+/* ================= PLANS SECTION ================= */
+
+.plans-wrapper {
+  width: 100%;
+  background: #d6e8f4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Batas pemisah antar layanan (warna biru muda background) */
+.gap-bar {
+  width: 100%;
+  height: 15px;
+  background: #d6e8f4;
+}
+
+.plans-section {
+  width: 100%;
+  padding: 40px 60px;
+  background: #2a5d74; /* Warna biru gelap penuh sesuai contoh */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Mengubah konsep card menjadi baris flat memanjang penuh */
+.plan-card {
+  width: 100%;
+  background: transparent; /* Menghilangkan box di dalam box */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.plan-card:hover {
+  transform: none; /* Menghilangkan hover melayang agar menyatu dengan background */
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Membuat harga sejajar di bawah dengan judul */
+  margin-bottom: 15px;
+}
+
+.card-top h2 {
+  font-size: 42px;
+  font-weight: 700; /* Sangat tebal (Bold) sesuai contoh gambar */
+  letter-spacing: -0.5px;
+}
+
+.card-top span {
+  font-size: 20px;
+  font-weight: 400; /* Lebih tipis (Regular) untuk kontras harga */
+  color: #ffffff;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 400; /* Regular */
+  line-height: 1.5;
+  color: #e2f1f7;
+  margin-bottom: 15px;
+  max-width: 80%; /* Agar teks tidak terlalu melar ke kanan */
+}
+
+.plan-card ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.plan-card li {
+  font-size: 16px;
+  font-weight: 400; /* Regular untuk list item */
+  margin-bottom: 6px;
+  color: #ffffff;
+  list-style-type: disc;
+}
+
+.plan-card button {
+  width: 200px;
+  align-self: flex-end;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 700; /* Tombol Bold tebal */
+  background: #c2def4;
+  color: #0d3c52;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: -40px; /* Menarik tombol naik sejajar dengan list */
+}
+
+.plan-card button:hover {
+  background: #ffffff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+  .hero-top {
+    flex-direction: row;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .plan-card button {
+    align-self: fill;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.health-header .header-left{
+  width: 100%;
+  display: flex;
+  background: linear-gradient(to right, #d8f0df, #a8c3ff);
+  align-items: center;
+  padding: 35px 20px 40px 20px;
+  gap: 30px;
+}
+
+.header-top-health {
+  display: flex;
+  width: 100%;
+  align-items: center; 
+  padding: 10px 0;
+  margin-left:10px;
+}
+
+.health-logo {
+  width: 80px;       
+  height: auto;
+  margin-left: 25px; 
+  margin-right: auto; 
+}
+
+.health-main-img {
+  width: 100px;
+  height: auto;
+  margin-left: 25px; 
+}

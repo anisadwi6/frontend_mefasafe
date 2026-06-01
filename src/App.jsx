@@ -16,6 +16,8 @@ import Header from "./pages/admin/Header";
 import RumahSakit from "./pages/admin/RumahSakit";
 import { useState } from "react";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
+import Riwayat from "./pages/Riwayat";
+import HealthService from "./pages/HealthService";
 
 function App() {
   const [sideBarCollapsed, setSideBarCollapsed] = useState(false);
@@ -53,6 +55,8 @@ function App() {
         <Route path="/profil" element={<Profil />} />
         <Route path="/notifikasi" element={<Notifikasi />} />
         <Route path="/daftarRS" element={<Daftar />} />
+        <Route path="/riwayat" element={<Riwayat />} />
+        <Route path="/HealthService" element={<HealthService />} />
         {/* <Route path="/RumahSakit" elemnt={<RumahSakit/>}/> */}
       </Routes>
     </BrowserRouter>
